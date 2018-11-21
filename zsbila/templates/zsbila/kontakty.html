@@ -12,12 +12,12 @@
 
           {% for contact in contacts %}
               <div class="clanek">
-                  <h1 class="h1-clanek">{{ kontakty.jmeno }}</h1>
+                  <h1 class="h1-clanek">{{ contact.jmeno }}</h1>
                   <p class="p-clanek">
-                      {{ kontakty.email }}
+                      {{ contact.email }}
                   </p>
-                  <p class="autor">Autor: {{ kontakty.tridni }}</p>
-                  <p class=datum>Datum: {{ kontakty.predmety }}</p>
+                  <p class="autor">Autor: {{ contact.tridni }}</p>
+                  <p class=datum>Datum: {{ contact.predmety }}</p>
               </div>
           {% endfor %}
 
