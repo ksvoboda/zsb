@@ -1,0 +1,22 @@
+{% extends "zsbila/default.html" %}
+{% load staticfiles %}
+
+{% block body %}
+    <div class="bgimg-3" style="background-image: url({% static 'pictures/adventure-climb-clouds-305818.jpg' %});">
+    </div>
+    <div class="content-box">
+        <div class="clanek-box2">
+            <div class="clanek2">
+                <h1 class="h1-clanek">{{ post.title_text }}</h1>
+                <p class="p-clanek">
+                    {{ post.post_long_text | safe }}
+                </p>
+                <div class="info-box">
+                    <p class="autor">Autor: {{ post.publisher }}</p>
+                    <br>
+                    <p class=datum>Datum: {{ post.pub_date }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
