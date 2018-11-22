@@ -1,7 +1,7 @@
 <h1>Webová stránka Základní školy Bílá</h1>
 
 
-Ještě je potřeba udělat:
+Před prvním spuštěním:
 
 <code>pip install django-summernote </code>
 
