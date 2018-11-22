@@ -14,8 +14,9 @@ Před prvním spuštěním:
 <h3>Frontend</h3>
 
 - vytvořit galerii (html, css, js)
+- upravit zobrazování kontaktů (kontakty.html)
 
 <h3>Backend</h3>
 
 - vytvořit galerii (models, ...)
-- umožnit odkazování na sttické stránky v menu
+- umožnit odkazování na statické stránky v menu (aktuálně nefunkční vytváření MenuItems a Category)
