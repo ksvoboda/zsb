@@ -55,7 +55,7 @@
                 <p class="dropmenu-name-2">{{ category.name }}</p>
         {% for item in items %}
             {% if item.item_category == category  %}
-                <a class="columnlink" href={{ item.item_link }}>{{ item.item_title }}</a>
+                <a class="columnlink" href="{{ item.item_link }}">{{ item.item_title }}</a>
             {% endif %}
         {% endfor %}
         </div>
@@ -70,7 +70,7 @@
         <img class="logo2" src="{% static 'pictures/zsbila-logo.png' %}"/>
         <p class="p-footer2">© 2018 Základní škola a <br>Mateřská škola, <br>Praha 6, Bílá 1</p>
         <p class="p-footer">Created by Kryštof Svoboda &<br>Vítek Peterka, students <br>of ZŠ Bílá</p>
-        
+
 
          {% for category in categories %}
              <div class="column-footer">

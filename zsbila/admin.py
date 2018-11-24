@@ -5,10 +5,11 @@ from django.contrib.flatpages.admin import FlatPageAdmin
 from django.contrib.flatpages.models import FlatPage
 from django.utils.translation import gettext_lazy as _
 
-from .models import Post, Category, MenuItem, Contact
+from .models import Post, Category, MenuItem, Contact, FlatPage
 
-admin.site.site_header = 'Administrace stránek'
+admin.site.site_header = 'Základní škola Bílá'
 admin.site.site_title = 'ZŠ Bílá'
+admin.site.index_title = 'Administrace stránek'
 
 
 class PostAdmin(SummernoteModelAdmin):
@@ -44,7 +45,7 @@ class FlatPageAdmin(SummernoteModelAdmin):
         (_('Advanced options'), {
             'classes': ('collapse',),
             'fields': (
-                'template_name',
+
             ),
         }),
     )

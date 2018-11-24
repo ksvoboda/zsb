@@ -1,6 +1,6 @@
 from django.shortcuts import render
 
-from .models import Post, Category, MenuItem
+from .models import Post, Category, MenuItem, Contact
 
 
 def index(request):
@@ -17,7 +17,9 @@ def clanek(request, nazev):
 
 
 def kontakty(request):
-    context = {'contacts': kontakty}
+    # contacts = Contact.objects.get(jmeno=nazev)
+    contacts = Contact.objects.filter().order_by('-jmeno')
+    context = {'contacts': contacts}
     return render(request, 'zsbila/kontakty.html', context)
 
 # Create your views here.
