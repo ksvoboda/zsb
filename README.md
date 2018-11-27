@@ -19,4 +19,4 @@ Před prvním spuštěním:
 <h3>Backend</h3>
 
 - vytvořit galerii (models, ...)
-- umožnit odkazování na statické stránky v menu (aktuálně nefunkční vytváření MenuItems a Category)
+- umožnit odkazování na statické stránky z menu (funkčí vytváření Category a MenuItem, nefunkčí odkazování)
