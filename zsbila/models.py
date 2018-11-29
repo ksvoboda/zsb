@@ -53,8 +53,8 @@ class MenuItem(SortableMixin):
     item_title = models.CharField('Text v menu', max_length=200)
     #item_internal = models.ForeignKey(FlatPage, on_delete=models.CASCADE, verbose_name='vnitřní stránka',
     #                                   help_text='Použijte při odkazování na stránku školy.', blank=True, null=True)
-    item_internal = models.CharField("vnitřní stránka (odkaz)", max_length=500000,
-                                     help_text='Použijte při odkazování na stránky školy.', blank=True, null=True)
+    #item_internal = models.CharField("vnitřní stránka (odkaz)", max_length=500000,
+    #                                 help_text='Použijte při odkazování na stránky školy.', blank=True, null=True)
     item_external = models.CharField("vnější stránka (odkaz)", max_length=500000,
                                      help_text='Použijte při odkazování mimo stránky školy.', blank=True, null=True)
     item_category = SortableForeignKey(Category, on_delete=models.CASCADE)
@@ -63,13 +63,6 @@ class MenuItem(SortableMixin):
 
     def __str__(self):
         return self.item_title
-
-    def clean(self):
-        #if self.item_external is None:
-        #    raise ValidationError('Položka v menu musí odkazovat na vnitřní, nebo vnější stránku.')
-
-        if self.item_internal is not None:
-                self.item_link = '/' + self.item_external.title_text.replace(' ', '%20')
 
     #def clean(self):
     #    if self.item_external is not None:

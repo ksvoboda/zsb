@@ -113,6 +113,7 @@ SUMMERNOTE_CONFIG = {
         'lang': 'cs-CZ',
     },
     'disable_attachment': True,
+    'fontNames': 'Verdana',
 }
 
 SUMMERNOTE_THEME = 'bs4'

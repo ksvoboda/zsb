@@ -2,6 +2,7 @@ from django.contrib import admin
 from django_summernote.admin import SummernoteModelAdmin
 from adminsortable.admin import NonSortableParentAdmin, SortableStackedInline
 from django.contrib.flatpages.admin import FlatPageAdmin
+from django.contrib.flatpages.forms import FlatpageForm
 from django.contrib.flatpages.models import FlatPage
 from django.utils.translation import gettext_lazy as _
 
@@ -49,6 +50,9 @@ class FlatPageAdmin(SummernoteModelAdmin):
             ),
         }),
     )
+
+
+
 
 
 admin.site.register(Category, CategoryAdmin)

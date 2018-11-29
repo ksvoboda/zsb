@@ -5,7 +5,7 @@ html, body {
     padding: 0;
     margin: 0;
     height: 100%;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 .navbar {
@@ -17,7 +17,7 @@ html, body {
 
 .navbar a {
     float: left;
-    font-size: 16px;
+    font-size: 17px;
     color: #3c3c3c;
     text-align: center;
     padding: 14px 16px;
@@ -50,11 +50,24 @@ html, body {
     color: #20323b;
     padding: 13px;
     text-transform: uppercase;
-    margin-left: 269px;
+    margin-left: 239px;
     margin-top: -87px;
 }
 
-.navbar a:hover, .dropdown:hover, .dropbtn:hover {
+.dropbtn2 {
+    cursor: pointer;
+    border: none;
+    width: 100px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 300;
+    color: #20323b;
+    padding: 13px;
+    text-transform: uppercase;
+    margin-left: 30px;
+}
+
+.navbar a:hover, .dropdown:hover, .dropbtn:hover, .dropbtn2:hover {
     background-color: #cccccc;
     -webkit-transition-duration: 0.3s;
     transition-duration: 0.3s;
@@ -86,24 +99,26 @@ html, body {
 .dropmenu-name {
     width: 125px;
     text-decoration: none;
-    font-size: 11px;
-    font-weight: 200;
+    font-size: 12px;
+    font-weight: 300;
     color: #20323b;
     background-color: #ffffff;
     padding: 1px;
     text-transform: uppercase;
+    border-bottom: 1px solid #669900;
 }
 
 .dropmenu-name-2 {
     width: 125px;
     text-decoration: none;
-    font-size: 11px;
-    font-weight: 200;
+    font-size: 12px;
+    font-weight: 300;
     color: #20323b;
     background-color: #ffffff;
     padding: 1px;
     margin-left: 50px;
     text-transform: uppercase;
+    border-bottom: 1px solid #669900;
 }
 
 .show {
@@ -119,13 +134,14 @@ html, body {
 .column2 {
     float: left;
     background-color: #ffffff;
+    margin-left: 50px;
 }
 
 /* Style links inside the columns */
 .column a.columnlink {
     width: 125px;
     text-decoration: none;
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 300;
     color: #20323b;
     background-color: #ffffff;
@@ -137,7 +153,7 @@ html, body {
 .column2 a.columnlink {
     width: 125px;
     text-decoration: none;
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 300;
     color: #20323b;
     background-color: #ffffff;
@@ -149,15 +165,15 @@ html, body {
 
 /* Add a background color on hover */
 .column a:hover {
-    color: #0077b3;
-    -webkit-transition-duration: 0.2s;
-    transition-duration: 0.2s;
+    color: #006699;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
 }
 
 .column2 a:hover {
-    color: #0077b3;
-    -webkit-transition-duration: 0.2s;
-    transition-duration: 0.2s;
+    color: #006699;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
 }
 
 ul {
@@ -300,14 +316,14 @@ li .logo {
 .info-box {
     width: 200px;
     min-height: 100px;
-    border-top: 1px solid #a6a6a6;
+    border-top: 1px solid #669900;
 }
 
 .clanek {
     width: 100%;
     min-height: 50px;
-    border-bottom: 1px solid #a6a6a6;
-    margin-top: 35px;
+    margin-top: 55px;
+    margin-bottom: 55px;
 }
 
 .clanek2 {
@@ -322,7 +338,7 @@ li .logo {
 h1.h1-clanek {
     text-decoration: none;
     font-size: 25px;
-    font-weight: 200;
+    font-weight: 400;
     color: #20323b;
 }
 
@@ -337,46 +353,46 @@ h1.h1-clanek {
 
 .autor {
     text-decoration: none;
-    font-size: 16px;
-    font-weight: 300;
-    color: #0077b3;
+    font-size: 14px;
+    font-weight: 400;
+    color: #006699;
     margin-top: 20px;
 }
 
 .datum {
     text-decoration: none;
-    font-size: 16px;
-    font-weight: 300;
-    color: #0077b3;
+    font-size: 14px;
+    font-weight: 400;
+    color: #006699;
     margin-top: -15px;
 }
 
 .vice-odkaz {
     text-decoration: none;
     font-size: 16px;
-    font-weight: 300;
-    color: #0077b3;
+    font-weight: 400;
+    color: #006699;
     float: right;
-    margin-top: 5px;
+    margin-top: 10px;
     margin-right: 10px;
     -webkit-transition-duration: 0.3s;
     transition-duration: 0.3s;
 }
 
 .vice-odkaz:hover {
-    color: #0077b3;
+    color: #006699;
     margin-right: 0px;
     -webkit-transition-duration: 0.3s;
     transition-duration: 0.3s;
 }
 
 .vice-odkaz:visited {
-    color: #0077b3;
+    color: #006699;
 }
 
 .footer {
     width: 100%;
-    height: 350px;
+    min-height: 420px;
     background-color: #20323b;
     opacity: 0.9;
     margin-top: 35px;
@@ -394,36 +410,37 @@ h1.h1-clanek {
 
 .p-footer {
     text-decoration: none;
-    font-size: 12px;
+    font-size: 13px;
     font-weight: 300;
     color: #fff;
-    padding-top: 10px;
+    margin-top: 40px;
 }
 
 .p-footer2 {
     text-decoration: none;
-    font-size: 12px;
+    font-size: 13px;
     font-weight: 300;
     color: #fff;
-    padding-top: 0px;
+    margin-top: 40px;
 }
 
 .dropmenu-name-footer {
     width: 125px;
     text-decoration: none;
-    font-size: 11px;
-    font-weight: 200;
+    font-size: 12px;
+    font-weight: 300;
     color: #fff;
     background-color: #20323b;
     padding: 1px;
     text-transform: uppercase;
+    border-bottom: 1px solid #669900;
 }
 
 .column-footer {
     float: left;
-    max-width: 150px;
+    max-width: 120px;
     margin-left: 250px;
-    margin-top: -213px;
+    margin-top: -280px;
     background-color: #20323b;
 }
 

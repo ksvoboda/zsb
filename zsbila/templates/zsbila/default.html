@@ -18,6 +18,7 @@
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Comfortaa:100,200,300,400,500,600,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
 </head>
 
 <body>
@@ -25,7 +26,7 @@
     <div class="navbar2">
         <ul>
             <li>
-                <a href="/">Domů</a>
+                <a href="/" class="dropbtn2">Domů</a>
             </li>
             <li class="logo">
                 <img class="logo" src="{% static 'pictures/zsbila-logo.jpg' %}"/>
@@ -55,7 +56,7 @@
         <p class="dropmenu-name-2">{{ category.name }}</p>
         {% for item in items %}
             {% if item.item_category == category  %}
-                <a class="columnlink" href="{{ item.item_link }}">{{ item.item_title }}</a>
+                <a class="columnlink" href={{ item.item_link }}>{{ item.item_title }}</a>
             {% endif %}
         {% endfor %}
         </div>
@@ -81,6 +82,7 @@
              {% endfor %}
              </div>
          {% endfor %}
+
     </div>
 </div>
 </html>
