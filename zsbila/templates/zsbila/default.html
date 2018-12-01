@@ -39,18 +39,6 @@
 </div>
 <div class="dropdown-content" id="myDropdown">
 
-   {% comment %}
-   <div class="column">
-        <p class="dropmenu-name">Hlavní nabídka</p>
-        <a class="columnlink" href="#">Aktuality</a>
-        <a class="columnlink" href="#">O škole</a>
-        <a class="columnlink" href="#">Školní akce</a>
-        <a class="columnlink" href="#">Projekty</a>
-        <a class="columnlink" href="#">Fotogalerie</a>
-        <a class="columnlink" href="#">Pro budoucí prvňáčky</a>
-    </div>
-    {% endcomment %}
-
     {% for category in categories %}
         <div class="column2">
         <p class="dropmenu-name-2">{{ category.name }}</p>
@@ -71,18 +59,6 @@
         <img class="logo2" src="{% static 'pictures/zsbila-logo.png' %}"/>
         <p class="p-footer2">© 2018 Základní škola a <br>Mateřská škola, <br>Praha 6, Bílá 1</p>
         <p class="p-footer">Created by Kryštof Svoboda &<br>Vítek Peterka, students <br>of ZŠ Bílá</p>
-
-         {% for category in categories %}
-             <div class="column-footer">
-                     <p class="dropmenu-name-footer">{{ category.name }}</p>
-             {% for item in items %}
-                 {% if item.item_category == category  %}
-                     <a class="columnlink-footer" href={{ item.item_link }}>{{ item.item_title }}</a>
-                 {% endif %}
-             {% endfor %}
-             </div>
-         {% endfor %}
-
     </div>
 </div>
 </html>

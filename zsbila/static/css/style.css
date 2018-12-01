@@ -5,6 +5,7 @@ html, body {
     padding: 0;
     margin: 0;
     height: 100%;
+    min-height: 100%;
     font-family: 'Roboto', sans-serif;
 }
 
@@ -311,6 +312,7 @@ li .logo {
     margin-left: auto;
     margin-right: auto;
     position: relative;
+    padding-bottom: 40px;
 }
 
 .info-box {
@@ -322,8 +324,16 @@ li .logo {
 .clanek {
     width: 100%;
     min-height: 50px;
-    margin-top: 55px;
-    margin-bottom: 55px;
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+.clanek-pinned {
+    width: 100%;
+    min-height: 50px;
+    margin-top: 50px;
+    margin-bottom: 60px;
+    border-bottom: 1px solid #cc0000;
 }
 
 .clanek2 {
@@ -391,16 +401,18 @@ h1.h1-clanek {
 }
 
 .footer {
-    width: 100%;
-    min-height: 420px;
     background-color: #20323b;
     opacity: 0.9;
-    margin-top: 35px;
+    clear: both;
+    position: relative;
+    height: 200px;
+    width: 100%;
+    margin-top: -40px;
 }
 
 .footer2 {
     max-width: 700px;
-    height: 250px;
+    height: 200px;
     background-color: #20323b;
     opacity: 0.9;
     margin-left: auto;
@@ -413,7 +425,8 @@ h1.h1-clanek {
     font-size: 13px;
     font-weight: 300;
     color: #fff;
-    margin-top: 40px;
+    margin-left: 200px;
+    margin-top: 20px;
 }
 
 .p-footer2 {
@@ -421,51 +434,14 @@ h1.h1-clanek {
     font-size: 13px;
     font-weight: 300;
     color: #fff;
-    margin-top: 40px;
-}
-
-.dropmenu-name-footer {
-    width: 125px;
-    text-decoration: none;
-    font-size: 12px;
-    font-weight: 300;
-    color: #fff;
-    background-color: #20323b;
-    padding: 1px;
-    text-transform: uppercase;
-    border-bottom: 1px solid #669900;
-}
-
-.column-footer {
-    float: left;
-    max-width: 120px;
-    margin-left: 250px;
-    margin-top: -280px;
-    background-color: #20323b;
-}
-
-.column-footer a.columnlink-footer {
-    width: 125px;
-    text-decoration: none;
-    font-size: 15px;
-    font-weight: 300;
-    color: #fff;
-    background-color: #20323b;
-    padding: 1px;
-    line-height: 1.6;
-    cursor: pointer;
-}
-
-.column-footer a:hover {
-    color: #0077b3;
-    -webkit-transition-duration: 0.2s;
-    transition-duration: 0.2s;
+    margin-left: 200px;
+    margin-top: -105px;
 }
 
 .logo2 {
     padding-right: 1px;
-    height: 85px;
-    width: 85px;
+    height: 100px;
+    width: 100px;
     margin-top: 50px;
 }
 
@@ -485,12 +461,6 @@ h1.h1-clanek {
 
   .logo2 {
       padding-left: 20px;
-  }
-}
-
-@media screen and (max-width: 460px) {
-  .column-footer {
-      margin-left: 225px;
   }
 }
 

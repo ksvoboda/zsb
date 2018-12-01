@@ -25,9 +25,9 @@ class Post(models.Model):
 
 
 class Contact(models.Model):
-    jmeno = models.CharField('Jmeno', max_length=200)
-    email = models.CharField('Email', max_length=200)
-    tridni = models.CharField('Třídní', max_length=200)
+    jmeno = models.CharField('Jméno', max_length=200)
+    email = models.EmailField('Email', max_length=200)
+    tridni = models.CharField('Třída', max_length=200)
     predmety = models.CharField('Předměty', max_length=200)
 
     def __str__(self):
@@ -53,13 +53,11 @@ class MenuItem(SortableMixin):
     item_title = models.CharField('Text v menu', max_length=200)
     #item_internal = models.ForeignKey(FlatPage, on_delete=models.CASCADE, verbose_name='vnitřní stránka',
     #                                   help_text='Použijte při odkazování na stránku školy.', blank=True, null=True)
-    #item_internal = models.CharField("vnitřní stránka (odkaz)", max_length=500000,
-    #                                 help_text='Použijte při odkazování na stránky školy.', blank=True, null=True)
-    item_external = models.CharField("vnější stránka (odkaz)", max_length=500000,
-                                     help_text='Použijte při odkazování mimo stránky školy.', blank=True, null=True)
+    #item_external = models.CharField("vnější stránka (odkaz)", max_length=500000,
+    #                                 help_text='Použijte při odkazování mimo stránky školy.', blank=True, null=True)
     item_category = SortableForeignKey(Category, on_delete=models.CASCADE)
     item_order = models.PositiveIntegerField(default=0, editable=False, db_index=True)
-    item_link = models.CharField(max_length=500000, editable=False)
+    item_link = models.CharField(max_length=500000, editable=True)
 
     def __str__(self):
         return self.item_title
@@ -67,8 +65,8 @@ class MenuItem(SortableMixin):
     #def clean(self):
     #    if self.item_external is not None:
     #        raise ValidationError('Položka v menu nemůže odkazovat na vnitřní a vnější stránku zároveň.')
-    #    elif self.item_external is None:
-    #        raise ValidationError('Položka v menu musí odkazovat na vnitřní, nebo vnější stránku.')
+    #    if self.item_external is None:
+    #        raise ValidationError('Položka v menu musí odkazovat.')
     #    else:
     #        if self.item_external is not None:
     #            self.item_link = self.item_external
