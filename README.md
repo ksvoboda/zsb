@@ -18,3 +18,4 @@ Před prvním spuštěním:
 <h3>Backend</h3>
 
 - vytvořit galerii (models, ...)
+- pagination
