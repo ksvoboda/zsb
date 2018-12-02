@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.core.paginator import EmptyPage, PageNotAnInteger, Paginator
 
 from .models import Post, Category, MenuItem, Contact
 
@@ -21,5 +22,23 @@ def kontakty(request):
     contacts = Contact.objects.filter().order_by('-jmeno')
     context = {'contacts': contacts}
     return render(request, 'zsbila/kontakty.html', context)
+
+
+def galerie(request):
+    # contacts = Contact.objects.get(jmeno=nazev)
+    context = {'galerie': galerie}
+    return render(request, 'zsbila/galerie.html', context)
+
+
+def galerierocniky(request):
+    # contacts = Contact.objects.get(jmeno=nazev)
+    context = {'galerie': galerie}
+    return render(request, 'zsbila/galerie-prehled-rocniky.html', context)
+
+
+def galerieakce(request):
+    # contacts = Contact.objects.get(jmeno=nazev)
+    context = {'galerie': galerie}
+    return render(request, 'zsbila/galerie-prehled-akce.html', context)
 
 # Create your views here.

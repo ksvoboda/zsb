@@ -42,13 +42,8 @@ class FlatPageAdmin(SummernoteModelAdmin):
     summernote_fields = '__all__'
 
     fieldsets = (
-        (None, {'fields': ('url', 'title', 'content')}),
-        (_('Advanced options'), {
-            'classes': ('collapse',),
-            'fields': (
+        (None, {'fields': ('url', 'title', 'content',)}),
 
-            ),
-        }),
     )
 
 

@@ -25,7 +25,7 @@
     <div class="navbar2">
         <ul>
             <li>
-                <a href="/">Domů</a>
+                <a href="/" class="dropbtn2">Domů</a>
             </li>
             <li class="logo">
                 <img class="logo" src="{% static 'pictures/zsbila-logo.jpg' %}"/>
@@ -59,19 +59,19 @@
 <div class="content-box">
     <div class="clanek-box2">
         <div class="clanek2">
-            <br>
-            <br>
-            <br>
+            <h1 class="h1-clanek">{{ flatpage.title }}</h1>
             {{ flatpage.content }}
         </div>
     </div>
 </div>
 </body>
 <div class="footer">
-    <div class="footer2">
+  <div class="footer2">
+    <div class="footer3">
         <img class="logo2" src="{% static 'pictures/zsbila-logo.png' %}"/>
         <p class="p-footer2">© 2018 Základní škola a <br>Mateřská škola, <br>Praha 6, Bílá 1</p>
         <p class="p-footer">Created by Kryštof Svoboda &<br>Vítek Peterka, students <br>of ZŠ Bílá</p>
     </div>
+  </div>
 </div>
 </html>

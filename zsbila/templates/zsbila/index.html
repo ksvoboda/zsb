@@ -7,31 +7,32 @@
 {% block body %}
     <div class="bgimg-2" style="background-image: url({% static 'pictures/adventure-climb-clouds-305818.jpg' %});">
     </div>
-      <div class="content-box2">
-        <div class="clanek-box">
-            {% for post in pinned_post_list %}
-                <div class="clanek-pinned">
-                    <h1 class="h1-clanek">{{ post.title_text }}</h1>
-                    <p class="p-clanek">
-                        {{ post.post_short_text | safe }}
-                    </p>
-                    <p><a href="/clanek/{{ post.title_text }}" class="vice-odkaz">Více >></a></p>
-                    <p class="autor">Autor: {{ post.publisher }}</p>
-                    <p class=datum>Datum: {{ post.pub_date }}</p>
-                </div>
-            {% endfor %}
 
-            {% for post in latest_post_list %}
-                <div class="clanek">
-                    <h1 class="h1-clanek">{{ post.title_text }}</h1>
-                    <p class="p-clanek">
-                        {{ post.post_short_text | safe }}
-                    </p>
-                    <p><a href="/clanek/{{ post.title_text }}" class="vice-odkaz">Více >></a></p>
-                    <p class="autor">Autor: {{ post.publisher }}</p>
-                    <p class=datum>Datum: {{ post.pub_date }}</p>
-                </div>
-            {% endfor %}
-        </div>
+    <div class="content-box2">
+      <div class="clanek-box">
+          {% for post in pinned_post_list %}
+              <div class="clanek-pinned">
+                  <h1 class="h1-kontakt">{{ post.title_text }}</h1>
+                  <p class="p-clanek">
+                      {{ post.post_short_text | safe }}
+                  </p>
+                  <p><a href="/clanek/{{ post.title_text }}" class="vice-odkaz">Více >></a></p>
+                  <p class="autor">Autor: {{ post.publisher }}</p>
+                  <p class=datum>Datum: {{ post.pub_date }}</p>
+              </div>
+          {% endfor %}
+
+          {% for post in latest_post_list %}
+              <div class="clanek">
+                  <h1 class="h1-kontakt">{{ post.title_text }}</h1>
+                  <p class="p-clanek">
+                      {{ post.post_short_text | safe }}
+                  </p>
+                  <p><a href="/clanek/{{ post.title_text }}" class="vice-odkaz">Více >></a></p>
+                  <p class="autor">Autor: {{ post.publisher }}</p>
+                  <p class=datum>Datum: {{ post.pub_date }}</p>
+              </div>
+          {% endfor %}
       </div>
+    </div>
 {% endblock %}

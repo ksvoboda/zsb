@@ -9,15 +9,37 @@
     </div>
     <div class="content-box2">
       <div class="clanek-box">
-
+          <h1 class="h1-kontakt">Kontakty</h1>
+          <br>
+          <a class="telefony">Adresa: &nbsp&nbsp</a><a class="telefony2">Základní škola a Mateřská škola, Praha 6, Bílá 1 </a>
+          <br>
+          <br>
+          <a class="telefony">Škola: &nbsp&nbsp</a><a class="telefony2">246 037 731</a>
+          <br>
+          <a class="telefony">Ředitelna: &nbsp&nbsp</a><a class="telefony2">224 310 107</a>
+          <br>
+          <a class="telefony">Jídelna: &nbsp&nbsp</a><a class="telefony2">246 031 390, &nbsp&nbsp720 462 831</a>
+          <br>
+          <a class="telefony">Družina: &nbsp&nbsp</a><a class="telefony2">775 434 349</a>
+          <br>
+          <a class="telefony">Mateřská škola: &nbsp&nbsp</a><a class="telefony2">246 037 731, &nbsp&nbsp775 434 346</a>
+          <br>
+          <br>
+          <a class="telefony">Email: &nbsp</a><a class="telefony2">skola@zsbila.cz</a>
+          <br>
+          <br>
+          <a class="telefony">Číslo účtu školy: &nbsp&nbsp</a><a class="telefony2">2337061/0100 &nbsp&nbsp + variabilní symbol akce</a>
+          <br>
+          <a class="telefony">Číslo účtu školní jídelny: &nbsp&nbsp</a><a class="telefony2">35-7580230217/0100 &nbsp&nbsp + variabilní symbol žáka</a>
+          <br>
+          <br>
+          <p class="tel-nadpis">Učitelé:</p>
           {% for contact in contacts %}
-              <div class="clanek">
-                  <h1 class="h1-clanek">{{ contact.jmeno }}</h1>
-                  <p class="p-clanek">
-                      {{ contact.email }}
-                  </p>
-                  <p class="autor">Autor: {{ contact.tridni }}</p>
-                  <p class=datum>Datum: {{ contact.predmety }}</p>
+              <div class="kontakt">
+                  <h1 class="jmeno-kontakt"><b>Jméno:</b> {{ contact.jmeno }}</h1>
+                  <p class="email-kontakt"><b>Email:</b> {{ contact.email }}</p>
+                  <p class="trida-kontakt"><b>Třída:</b> {{ contact.tridni }}</p>
+                  <p class=predmet-kontakt><b>Předměty:</b> {{ contact.predmety }}</p>
               </div>
           {% endfor %}
 
