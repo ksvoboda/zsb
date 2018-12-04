@@ -14,6 +14,7 @@ Před prvním spuštěním:
 <h3>Frontend</h3>
 
 - vytvořit galerii (html, css, js)
+- upravit footer
 
 <h3>Backend</h3>
 
