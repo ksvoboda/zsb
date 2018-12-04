@@ -12,7 +12,7 @@
       <div class="clanek-box">
           {% for post in pinned_post_list %}
               <div class="clanek-pinned">
-                  <h1 class="h1-kontakt">{{ post.title_text }}</h1>
+                  <h1 class="h1-kontakt2">{{ post.title_text }}</h1>
                   <p class="p-clanek">
                       {{ post.post_short_text | safe }}
                   </p>
@@ -22,7 +22,7 @@
               </div>
           {% endfor %}
 
-          {% for post in latest_post_list %}
+          {% for post in posts %}
               <div class="clanek">
                   <h1 class="h1-kontakt">{{ post.title_text }}</h1>
                   <p class="p-clanek">
@@ -33,6 +33,33 @@
                   <p class=datum>Datum: {{ post.pub_date }}</p>
               </div>
           {% endfor %}
+
+
+          <div class="pagination">
+              {% if posts.has_previous %}
+                    <a href="?page={{ posts.previous_page_number }}" class="pagination-odkaz">Previous</a>
+              {% endif %}
+
+
+                  {% for num in post.paginator.page_range %}
+                        {{ num }}
+                  {% endfor %}
+
+              {% if posts.has_next %}
+                    <a href="?page={{ posts.next_page_number }}" class="pagination-odkaz2">Next</a>
+              {% endif %}
+          </div>
+
+
+          {% comment %}
+          <div class="pagination p7">
+              <ul>
+                  <a class="is-active" href="#"><li>Previous</li></a>
+                  <a href="#"><li>Next</li></a>
+              </ul>
+          </div>
+          {% endcomment %}
+
       </div>
     </div>
 {% endblock %}

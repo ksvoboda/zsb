@@ -1,13 +1,18 @@
 from django.shortcuts import render
-from django.core.paginator import EmptyPage, PageNotAnInteger, Paginator
+from django.core.paginator import Paginator
 
 from .models import Post, Category, MenuItem, Contact
 
 
 def index(request):
-    latest_post_list = Post.objects.filter(post_pinned=False).order_by('-pub_date')
+    posts = Post.objects.filter(post_pinned=False).order_by('-pub_date')
     pinned_post_list = Post.objects.filter(post_pinned=True)
-    context = {'latest_post_list': latest_post_list, 'pinned_post_list': pinned_post_list}
+
+    paginator = Paginator(posts, 2)
+    page = request.GET.get('page')
+    posts = paginator.get_page(page)
+
+    context = {'posts' : posts, 'pinned_post_list' : pinned_post_list}
     return render(request, 'zsbila/index.html', context)
 
 

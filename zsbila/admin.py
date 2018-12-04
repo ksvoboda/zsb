@@ -47,9 +47,6 @@ class FlatPageAdmin(SummernoteModelAdmin):
     )
 
 
-
-
-
 admin.site.register(Category, CategoryAdmin)
 admin.site.register(Post, PostAdmin)
 admin.site.unregister(FlatPage)
