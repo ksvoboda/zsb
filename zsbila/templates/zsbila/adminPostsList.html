@@ -1,0 +1,33 @@
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="/static/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,300i,400,400i,500" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div class="table-out">
+        <div class="table-header">
+            <a href="/clanek/new/edit" class="create-btn">Vytvořit nový</a>
+        </div>
+        {% for post in posts %}
+            <div class="table-in">
+                <div class="table-img-1">
+                    <img src="{{ marker.image }}" class="table-img"/>
+                </div>
+                <div class="table-text-1">
+                    <span class="title">{{ post.title_text }}</span><br/>
+                    <span class="description">{{ post.title_text }}</span><br/>
+                </div>
+                <div class="table-text-2">
+                    <span class="lat">Autor: &nbsp;{{ post.publisher }}</span><br/>
+                    <span class="lng">Datum: &nbsp;{{ post.pub_date }}</span>
+                </div>
+                <div class="table-control">
+                    <a href="/clanek/{{ post.title_text }}/delete" class="table-control2">Smazat</a><br/>
+                    <a href="/clanek/{{ post.title_text }}/edit" class="table-control2">Upravit</a><br/>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</body>
+</html>

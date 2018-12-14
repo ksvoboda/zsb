@@ -1,0 +1,53 @@
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="/static/css/util.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,300i,400,400i,500" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/static/vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/static/vendor/animate/animate.css">
+    <link rel="stylesheet" type="text/css" href="/static/vendor/css-hamburgers/hamburgers.min.css">
+    <link rel="stylesheet" type="text/css" href="/static/vendor/animsition/css/animsition.min.css">
+    <link rel="stylesheet" type="text/css" href="/static/vendor/select2/select2.min.css">
+    <link rel="stylesheet" type="text/css" href="/static/vendor/daterangepicker/daterangepicker.css">
+</head>
+<body>
+<div class="limiter">
+    <div class="login-container">
+        <div class="login-container-3">
+
+            {% if form.errors %}
+                <p class="text-danger validation-summary-errors">Uživatelské jméno a heslo se neshodují.</p>
+            {% endif %}
+
+            <form method="post" action="{% url 'login' %}">
+                {% csrf_token %}
+
+                <div class="input-form2 validate-input m-b-26">
+                    <div align="center">
+                        <span class="label2">Jméno</span>
+                    </div>
+                    {{ form.username }}
+                </div>
+
+                <div class="input-form2 validate-input m-b-26" >
+                    <div align="center">
+                        <span class="label2">Heslo</span>
+                    </div>
+                    {{ form.password }}
+                </div>
+
+                <div class="flex-sb-m w-full p-b-30">
+                    <div class="container-login-form-btn">
+                        <button class="login-form-btn2" type="submit">
+                            Přihlásit se
+                        </button>
+                    </div>
+                </div>
+                <input type="hidden" name="next" value="{{ next }}">
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>

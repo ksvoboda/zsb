@@ -14,7 +14,7 @@
               <div class="clanek-pinned">
                   <h1 class="h1-kontakt2">{{ post.title_text }}</h1>
                   <p class="p-clanek">
-                      {{ post.post_short_text | safe }}
+                      {{ post.post_short_text | safe | escape }}
                   </p>
                   <p><a href="/clanek/{{ post.title_text }}" class="vice-odkaz">Více >></a></p>
                   <p class="autor">Autor: {{ post.publisher }}</p>
@@ -26,7 +26,7 @@
               <div class="clanek">
                   <h1 class="h1-kontakt">{{ post.title_text }}</h1>
                   <p class="p-clanek">
-                      {{ post.post_short_text | safe }}
+                      {{ post.post_short_text | safe | escape }}
                   </p>
                   <p><a href="/clanek/{{ post.title_text }}" class="vice-odkaz">Více >></a></p>
                   <p class="autor">Autor: {{ post.publisher }}</p>
@@ -49,17 +49,6 @@
                     <a href="?page={{ posts.next_page_number }}" class="pagination-odkaz2">Next</a>
               {% endif %}
           </div>
-
-
-          {% comment %}
-          <div class="pagination p7">
-              <ul>
-                  <a class="is-active" href="#"><li>Previous</li></a>
-                  <a href="#"><li>Next</li></a>
-              </ul>
-          </div>
-          {% endcomment %}
-
       </div>
     </div>
 {% endblock %}

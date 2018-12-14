@@ -111,9 +111,17 @@ AUTH_PASSWORD_VALIDATORS = [
 SUMMERNOTE_CONFIG = {
     'summernote': {
         'lang': 'cs-CZ',
+        'toolbar': [
+            ['style', ['bold', 'italic', 'underline', 'clear']],
+            ['font', ['strikethrough', 'superscript', 'subscript']],
+            ['fontsize', ['14']],
+            ['para', ['ul', 'ol', 'paragraph']],
+            ['height', ['height']],
+            ['misc', ['codeview']],
+            ['insert', ['picture', 'link', 'video']],
+        ],
     },
     'disable_attachment': True,
-    'fontNames': 'Verdana',
 }
 
 SUMMERNOTE_THEME = 'bs4'

@@ -1,6 +1,11 @@
 from django.shortcuts import render
 from django.core.paginator import Paginator
+from django.contrib.auth.decorators import login_required
+from django.shortcuts import redirect
+from django.http import HttpResponseRedirect
+from django.contrib.auth import logout
 
+from .forms import PostForm
 from .models import Post, Category, MenuItem, Contact
 
 
@@ -8,7 +13,7 @@ def index(request):
     posts = Post.objects.filter(post_pinned=False).order_by('-pub_date')
     pinned_post_list = Post.objects.filter(post_pinned=True)
 
-    paginator = Paginator(posts, 2)
+    paginator = Paginator(posts, 4)
     page = request.GET.get('page')
     posts = paginator.get_page(page)
 
@@ -23,27 +28,71 @@ def clanek(request, nazev):
 
 
 def kontakty(request):
-    # contacts = Contact.objects.get(jmeno=nazev)
     contacts = Contact.objects.filter().order_by('-jmeno')
     context = {'contacts': contacts}
     return render(request, 'zsbila/kontakty.html', context)
 
 
 def galerie(request):
-    # contacts = Contact.objects.get(jmeno=nazev)
     context = {'galerie': galerie}
     return render(request, 'zsbila/galerie.html', context)
 
 
 def galerierocniky(request):
-    # contacts = Contact.objects.get(jmeno=nazev)
     context = {'galerie': galerie}
     return render(request, 'zsbila/galerie-prehled-rocniky.html', context)
 
 
 def galerieakce(request):
-    # contacts = Contact.objects.get(jmeno=nazev)
     context = {'galerie': galerie}
     return render(request, 'zsbila/galerie-prehled-akce.html', context)
 
-# Create your views here.
+
+@login_required
+def admin(request):
+    # Stránka pro přihlášení
+    return HttpResponseRedirect("posts")
+
+
+def admin_logout(request):
+    # Stránka na odhlašování
+    logout(request)
+    return HttpResponseRedirect("/")
+
+
+@login_required
+def admin_posts_list(request):
+    posts = Post.objects.all()
+    return render(request, 'zsbila/adminPostsList.html', {"posts": posts})
+
+
+@login_required
+def post_edit(request, nazev):
+    if nazev == "new":
+        if request.method == 'POST':
+            form = PostForm(request.POST)
+            if form.is_valid():
+                form.save()
+                return HttpResponseRedirect('/admin/posts')
+        else:
+            form = PostForm()
+    else:
+        instance = Post.objects.get(title_text=nazev)
+
+        if request.method == 'POST':
+            form = PostForm(request.POST, instance=instance)
+            if form.is_valid():
+                form.save()
+                return HttpResponseRedirect('/admin/posts')
+
+        else:
+            form = PostForm(instance=instance)
+
+    return render(request, 'zsbila/adminPostEdit.html', {'form': form, 'nazev': nazev})
+
+
+@login_required
+def admin_post_delete(request, nazev):
+    # Smazání bodu
+    Post.objects.get(title_text=nazev).delete()
+    return HttpResponseRedirect('/admin/posts')

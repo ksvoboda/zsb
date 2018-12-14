@@ -23,7 +23,7 @@ urlpatterns = [
     path('', include('zsbila.urls')),
     url(r'^summernote/', include('django_summernote.urls')),
     path('pages/', include('django.contrib.flatpages.urls')),
-    path('admin/', admin.site.urls),
+    path('accounts/', include('django.contrib.auth.urls')),
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
