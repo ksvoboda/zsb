@@ -1,13 +1,44 @@
 <html>
 <head>
     <title>ZŠ Bílá | Administrace</title>
-    <link rel="stylesheet" type="text/css" href="/static/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/style-admin.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,300i,400,400i,500" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-
-
-{% block admin %} {% endblock %}
+    <div class="navigation">
+        <div class="account-info">
+            <img src="/static/pictures/avatar3.png" class="img-avatar">
+            <h4>Jiří Švec</h4>
+            <h6>Zástupce ředitele</h6>
+        </div>
+        <div class="navigation2">
+            <ul class="nav-ul">
+                <li><a href="/admin">Úvodní stránka</a><a style="float: right;"><i class="material-icons md-dark">keyboard_arrow_right</i></a></li>
+                <li><a href="/admin/posts">Články</a><a style="float: right;"><i class="material-icons md-dark">keyboard_arrow_right</i></a></li>
+                <li><a href="/admin/posts">Statické stránky</a><a style="float: right;"><i class="material-icons md-dark">keyboard_arrow_right</i></a></li>
+                <li><a href="/admin/kontakty">Učitelé</a><a style="float: right;"><i class="material-icons md-dark">keyboard_arrow_right</i></a></li>
+                <li><a href="/admin/foto">Fotogalerie</a><a style="float: right;"><i class="material-icons md-dark">keyboard_arrow_right</i></a></li>
+                <li><a href="/admin/menu">Menu</a><a style="float: right;"><i class="material-icons md-dark">keyboard_arrow_right</i></a></li>
+                <li><a href="/admin/users">Uživatelé</a><a style="float: right;"><i class="material-icons md-dark">keyboard_arrow_right</i></a></li>
+                <li><a href="/admin/settings">Nastavení</a><a style="float: right;"><i class="material-icons md-dark">keyboard_arrow_right</i></a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="navigation-top">
+        <div class="namebox">
+            <h1 class="h1-name" align="center">Administrace</h1>
+        </div>
+        <div class="account-top">
+            <a href="/admin"><img src="/static/pictures/home-5-256.png" alt="Domů"></a>
+            <a href="/"><img src="/static/pictures/globe-256.png" alt="Zobrazit stránku"></a>
+            <a href="#"><img src="/static/pictures/settings-25-256.png" alt="Nastavení"></a>
+            <a href="/admin/logout"><img src="/static/pictures/door-9-256.png" alt="Odhlásit se"></a>
+        </div>
+    </div>
+    <div class="render-body">
+        {% block admin %}  {% endblock %}
+    </div>
 </body>
 </html>

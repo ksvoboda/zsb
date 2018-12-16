@@ -1,6 +1,8 @@
 {% extends "zsbila/defaultadmin.html" %}
 
+
 {% block admin %}
+{% comment %}
     <div class="table-out">
         <div class="table-header">
             <a href="/clanek/new/edit" class="create-btn">Vytvořit nový</a>
@@ -25,4 +27,5 @@
             </div>
         {% endfor %}
     </div>
+    {% endcomment %}
 {% endblock %}

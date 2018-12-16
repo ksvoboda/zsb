@@ -1,5 +1,10 @@
-<h1>New post</h1>
-<form method="POST" class="post-form">{% csrf_token %}
-   {{ form.as_p }}
-   <button type="submit" class="save btn btn-default">Save</button>
-</form>
+{% extends "zsbila/defaultadmin.html" %}
+
+
+{% block admin %}
+    <h1 class="dashboard-name">Úvodní stránka</h1>
+    <form method="POST" class="post-form">{% csrf_token %}
+       {{ form.as_p }}
+       <button type="submit" class="save btn btn-default">Save</button>
+    </form>
+{% endblock %}

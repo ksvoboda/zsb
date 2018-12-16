@@ -51,7 +51,7 @@ def galerieakce(request):
 @login_required
 def admin(request):
     # Stránka pro přihlášení
-    return HttpResponseRedirect("posts")
+    return HttpResponseRedirect("dashboard")
 
 
 def admin_logout(request):
@@ -61,13 +61,19 @@ def admin_logout(request):
 
 
 @login_required
+def admin_dashboard(request):
+    # posts = Post.objects.all()
+    return render(request, 'zsbila/admindashboard.html')
+
+
+@login_required
 def admin_posts_list(request):
     posts = Post.objects.all()
     return render(request, 'zsbila/adminPostsList.html', {"posts": posts})
 
 
 @login_required
-def post_edit(request, nazev):
+def admin_post_edit(request, nazev):
     if nazev == "new":
         if request.method == 'POST':
             form = PostForm(request.POST)
