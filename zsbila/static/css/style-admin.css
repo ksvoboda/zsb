@@ -93,12 +93,15 @@ html, body {
     right: 0;
     position: absolute;
     background-color: #ebf0f4;
+    margin-top: 60px;
 }
 
 .navigation-top {
     height: 60px;
     width: 100%;
     background-color: #336699;
+    position: fixed;
+    z-index: 123;
 }
 
 .navigation {
@@ -243,9 +246,9 @@ li a {
 }
 
 li a:hover {
-   color: #669900;
-   -webkit-transition-duration: 0.3s;
-   transition-duration: 0.3s;
+    color: #669900;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
 }
 
 .material-icons {
@@ -268,26 +271,25 @@ li a:hover {
 
 /* admin table */
 .table-out {
-    width: 85%;
+    max-width: 1200px;
     height: auto;
-    margin-left: auto;
-    margin-right: auto;
     background-color: #fff;
     -webkit-box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.51);
     -moz-box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.51);
     box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.10);
-    margin-top: 75px;
     min-width: 755px;
+    margin-left: 100px;
 }
 
 .table-header {
-    width: 100%;
+    width: 200px;
     height: 54px;
-    min-width: 500px;
+    margin-left: 100px;
+    margin-top: 50px;
 }
 
 .create-btn {
-    background-color: #006080;
+    background-color: #336699;
     font-family: 'Poppins', sans-serif;
     color: #fff;
     padding: 12px 12px;
@@ -299,17 +301,17 @@ li a:hover {
     -webkit-transition-duration: 0.3s;
     transition-duration: 0.3s;
     cursor: pointer;
-    width: 100%;
+    width: 200px;
 }
 
 .create-btn:hover {
-    background-color: #006080;
+    background-color: #336699;
     color: #ffffff;
 }
 
 .table-in {
     width: 100%;
-    height: 115px;
+    height: 105px;
     border-bottom: 1px solid #bfbfbf;
     min-width: 755px;
 }
@@ -317,13 +319,14 @@ li a:hover {
 .table-img-1 {
     width: auto;
     height: 100px;
-    margin-left: 20px
+    margin-left: 20px;
 }
 
 .table-img {
     width: auto;
     height: 75px;
-    margin-top: 15px
+    margin-top: 15px;
+    background-color: #336699;
 }
 
 .table-img-pointer {
@@ -334,18 +337,10 @@ li a:hover {
 }
 
 .table-text-1 {
-    width: 230px;
+    width: 500px;
     margin-left: 150px;
-    border-right: 1px solid #bfbfbf;
-    margin-top: -100px;
+    margin-top: -80px;
     min-width: 230px;
-}
-
-.table-text-2 {
-    width: 200px;
-    margin-left: 400px;
-    margin-top: -55px;
-    min-width: 250px;
 }
 
 .title {
@@ -381,7 +376,7 @@ li a:hover {
 }
 
 .table-control {
-    margin-top: -65px;
+    margin-top: -50px;
     margin-right: 50px;
     float: right;
     min-width: 60px;

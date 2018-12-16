@@ -14,9 +14,9 @@
               <div class="clanek-pinned">
                   <h1 class="h1-kontakt2">{{ post.title_text }}</h1>
                   <p class="p-clanek">
-                      {{ post.post_short_text | safe | escape }}
+                      {{ post.post_short_text | safe }}
                   </p>
-                  <p><a href="/clanek/{{ post.title_text }}" class="vice-odkaz">Více >></a></p>
+                  <p><a href="/post/{{ post.title_text }}" class="vice-odkaz">Více >></a></p>
                   <p class="autor">Autor: {{ post.publisher }}</p>
                   <p class=datum>Datum: {{ post.pub_date }}</p>
               </div>

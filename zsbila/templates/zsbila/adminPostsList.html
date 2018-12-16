@@ -2,30 +2,26 @@
 
 
 {% block admin %}
-{% comment %}
+    <div class="table-header">
+        <a href="/admin/post/new/edit" class="create-btn">Vytvořit nový</a>
+    </div>
     <div class="table-out">
-        <div class="table-header">
-            <a href="/clanek/new/edit" class="create-btn">Vytvořit nový</a>
-        </div>
         {% for post in posts %}
             <div class="table-in">
                 <div class="table-img-1">
-                    <img src="{{ marker.image }}" class="table-img"/>
+                    <img src="/static/pictures/globe-256.png" class="table-img"/>
                 </div>
                 <div class="table-text-1">
                     <span class="title">{{ post.title_text }}</span><br/>
-                    <span class="description">{{ post.title_text }}</span><br/>
-                </div>
-                <div class="table-text-2">
                     <span class="lat">Autor: &nbsp;{{ post.publisher }}</span><br/>
                     <span class="lng">Datum: &nbsp;{{ post.pub_date }}</span>
                 </div>
                 <div class="table-control">
-                    <a href="/clanek/{{ post.title_text }}/delete" class="table-control2">Smazat</a><br/>
-                    <a href="/clanek/{{ post.title_text }}/edit" class="table-control2">Upravit</a><br/>
+                    <a href="/admin/post/{{ post.title_text }}/delete" class="table-control2">Smazat</a><br/>
+                    <a href="/admin/post/{{ post.title_text }}/edit" class="table-control2">Upravit</a><br/>
                 </div>
             </div>
         {% endfor %}
     </div>
-    {% endcomment %}
+
 {% endblock %}

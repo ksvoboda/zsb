@@ -38,7 +38,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django.contrib.sites',
     'django.contrib.flatpages',
-    'django_summernote',
     'adminsortable',
 ]
 
@@ -105,26 +104,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-# Internationalization
-# https://docs.djangoproject.com/en/2.0/topics/i18n/
-
-SUMMERNOTE_CONFIG = {
-    'summernote': {
-        'lang': 'cs-CZ',
-        'toolbar': [
-            ['style', ['bold', 'italic', 'underline', 'clear']],
-            ['font', ['strikethrough', 'superscript', 'subscript']],
-            ['fontsize', ['14']],
-            ['para', ['ul', 'ol', 'paragraph']],
-            ['height', ['height']],
-            ['misc', ['codeview']],
-            ['insert', ['picture', 'link', 'video']],
-        ],
-    },
-    'disable_attachment': True,
-}
-
-SUMMERNOTE_THEME = 'bs4'
 
 LANGUAGE_CODE = 'cs'
 
