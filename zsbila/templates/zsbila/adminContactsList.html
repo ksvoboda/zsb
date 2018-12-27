@@ -1,0 +1,27 @@
+{% extends "zsbila/defaultadmin.html" %}
+
+
+{% block admin %}
+    <div class="table-header">
+        <a href="/admin/contact/new/edit" class="create-btn">Vytvořit nový</a>
+    </div>
+    <div class="table-out">
+        {% for contact in contacts %}
+            <div class="table-in">
+                <div class="table-img-1">
+                    <img src="/static/pictures/globe-256.png" class="table-img"/>
+                </div>
+                <div class="table-text-1">
+                    <span class="title">{{ contact.jmeno }}</span><br/>
+                    <span class="lat">Autor: &nbsp;{{ contact.tridni }}</span><br/>
+                    <span class="lng">Datum: &nbsp;{{ contact.predmety }}</span>
+                </div>
+                <div class="table-control">
+                    <a href="/admin/post/{{ post.title_text }}/delete" class="table-control2">Smazat</a><br/>
+                    <a href="/admin/post/{{ post.title_text }}/edit" class="table-control2">Upravit</a><br/>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+
+{% endblock %}

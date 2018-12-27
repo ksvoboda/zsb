@@ -14,7 +14,7 @@ class Post(models.Model):
     post_long_text = models.TextField(editable=False)
 
     pub_date = models.DateTimeField(auto_now=True)
-    publisher = models.CharField(null=True, blank=True, max_length=200, editable=True)
+    publisher = models.CharField('Autor', null=True, blank=True, max_length=200, editable=True)
 
     def __str__(self):
         return self.title_text
@@ -27,7 +27,7 @@ class Post(models.Model):
 class Contact(models.Model):
     jmeno = models.CharField('Jméno', max_length=200)
     email = models.EmailField('Email', max_length=200)
-    tridni = models.CharField('Třída', max_length=200)
+    tridni = models.CharField('Třída', max_length=200, null=True, blank=True)
     predmety = models.CharField('Předměty', max_length=200)
 
     def __str__(self):

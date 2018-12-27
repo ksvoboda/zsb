@@ -2,9 +2,19 @@
 
 
 {% block admin %}
-    <h1 class="dashboard-name">Úvodní stránka</h1>
+    <h1 class="dashboard-name">Upravit článek</h1>
     <form method="POST" class="post-form">{% csrf_token %}
+       {{ item_formset.management_form }}
        {{ form.as_p }}
-       <button type="submit" class="save btn btn-default">Save</button>
+
+
+       {% comment %}
+           {{ form.title_text }}
+           {{ form.post_text }}
+           {{ form.post_pinned }}
+           {{ form.publisher }}
+       {% endcomment %}
+       <button type="submit" class="save btn btn-default">Uložit</button>
     </form>
+
 {% endblock %}

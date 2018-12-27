@@ -1,0 +1,26 @@
+{% extends "zsbila/defaultadmin.html" %}
+
+
+{% block admin %}
+    <div class="table-header">
+        <a href="/admin/flatpage/new/edit" class="create-btn">Vytvořit nový</a>
+    </div>
+    <div class="table-out">
+        {% for flatpage in flatpages %}
+            <div class="table-in">
+                <div class="table-img-1">
+                    <img src="/static/pictures/globe-256.png" class="table-img"/>
+                </div>
+                <div class="table-text-1">
+                    <span class="title">{{ flatpage.title }}</span><br/>
+                    <a href="/flatpage/{{ flatpage.title }}" class="table-control2">Upravit</a><br/>
+                </div>
+                <div class="table-control">
+                    <a href="/admin/flatpage/{{ post.title_text }}/delete" class="table-control2">Smazat</a><br/>
+                    <a href="/admin/flatpage/{{ post.title_text }}/edit" class="table-control2">Upravit</a><br/>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+
+{% endblock %}
