@@ -14,7 +14,7 @@
               <div class="clanek-pinned">
                   <h1 class="h1-kontakt2">{{ post.title_text }}</h1>
                   <p class="p-clanek">
-                      {{ post.post_short_text | safe }}
+                      {{ post.post_text | safe }}
                   </p>
                   <p><a href="/post/{{ post.title_text }}" class="vice-odkaz">Více >></a></p>
                   <p class="autor">Autor: {{ post.publisher }}</p>
@@ -26,7 +26,7 @@
               <div class="clanek">
                   <h1 class="h1-kontakt">{{ post.title_text }}</h1>
                   <p class="p-clanek">
-                      {{ post.post_short_text | safe }}
+                      {{ post.post_text | safe }}
                   </p>
                   <p><a href="/post/{{ post.title_text }}" class="vice-odkaz">Více >></a></p>
                   <p class="autor">Autor: {{ post.publisher }}</p>

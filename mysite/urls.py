@@ -24,6 +24,7 @@ urlpatterns = [
     url(r'^summernote/', include('django_summernote.urls')),
     path('pages/', include('django.contrib.flatpages.urls')),
     path('accounts/', include('django.contrib.auth.urls')),
+    url(r'^froala_editor/', include('froala_editor.urls')),
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
