@@ -18,6 +18,7 @@ Před prvním spuštěním:
 - upravit vzhled administrační stránky
 - vyřešit problémy se stránkou o nás (o-nas.html)
 - rozdělení učitelů (třídní, netřídní,...)
+- vzhled stránky 404
 
 <h3>Backend</h3>
 
