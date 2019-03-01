@@ -6,7 +6,7 @@ from django.http import HttpResponseRedirect
 from django.contrib.auth import logout
 from django.forms import formset_factory
 
-from .forms import PostForm, ContactForm, FlatPageForm
+from .forms import PostForm, ContactForm, FlatPageForm, MenuCatForm, MenuItemForm
 from .models import Post, Category, MenuItem, Contact, FlatPage
 
 
@@ -32,6 +32,10 @@ def kontakty(request):
     contacts = Contact.objects.filter().order_by('-jmeno')
     context = {'contacts': contacts}
     return render(request, 'zsbila/kontakty.html', context)
+
+
+def onas(request):
+    return render(request, 'zsbila/o-nas.html')
 
 
 def flatpage(request, nazev2):
@@ -70,6 +74,12 @@ def admin_logout(request):
 @login_required
 def admin_dashboard(request):
     return render(request, 'zsbila/admindashboard.html')
+
+
+@login_required
+def admin_menuall(request):
+    return render(request, 'zsbila/adminMenuAll.html')
+
 
 # admin - posts
 @login_required
@@ -186,3 +196,88 @@ def admin_flatpage_delete(request,nazev2):
     # Smazání bodu
     FlatPage.objects.get(jmeno=id).delete()
     return HttpResponseRedirect('/admin/contacts')
+
+#
+#
+#
+#
+# admin - menu category
+@login_required
+def admin_menu_cat_list(request):
+    menu_cat = Category.objects.all()
+    return render(request, 'zsbila/adminMenuCatList.html', {"menu_cat": menu_cat})
+
+
+@login_required
+def admin_menu_cat_edit(request, menu_cat):
+    if menu_cat == "new":
+        if request.method == 'POST':
+            form = MenuCatForm(request.POST)
+            if form.is_valid():
+                form.save()
+                return HttpResponseRedirect('/admin/menu-cat')
+        else:
+            form = MenuCatForm()
+    else:
+        instance = Category.objects.get(name=menu_cat)
+
+        if request.method == 'POST':
+            form = MenuCatForm(request.POST, instance=instance)
+            if form.is_valid():
+                form.save()
+                return HttpResponseRedirect('/admin/menu-cat')
+
+        else:
+            form = MenuCatForm(instance=instance)
+
+    return render(request, 'zsbila/adminMenuCatEdit.html', {'form': form, 'menu_cat': menu_cat})
+
+
+@login_required
+def admin_menu_cat_delete(request, menu_cat):
+    # Smazání bodu
+    Category.objects.get(name=menu_cat).delete()
+    return HttpResponseRedirect('/admin/menu-cat')
+
+
+
+
+
+
+# admin - menu item
+@login_required
+def admin_menu_item_list(request):
+    menu_item = Category.objects.all()
+    return render(request, 'zsbila/adminMenuItemList.html', {"menu_item": menu_item})
+
+
+@login_required
+def admin_menu_item_edit(request, menu_item):
+    if menu_item == "new":
+        if request.method == 'POST':
+            form = MenuItemForm(request.POST)
+            if form.is_valid():
+                form.save()
+                return HttpResponseRedirect('/admin/menu-cat/menu-item')
+        else:
+            form = MenuItemForm()
+    else:
+        instance = Category.objects.get(name=menu_item)
+
+        if request.method == 'POST':
+            form = MenuItemForm(request.POST, instance=instance)
+            if form.is_valid():
+                form.save()
+                return HttpResponseRedirect('/admin/menu-cat/menu_item')
+
+        else:
+            form = MenuItemForm(instance=instance)
+
+    return render(request, 'zsbila/adminMenuItemEdit.html', {'form': form, 'menu_item': menu_item})
+
+
+@login_required
+def admin_menu_item_delete(request, menu_item):
+    # Smazání bodu
+    Category.objects.get(name=menu_item).delete()
+    return HttpResponseRedirect('/admin/menu-cat/menu_item')

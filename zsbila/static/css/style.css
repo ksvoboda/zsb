@@ -295,6 +295,15 @@ li .logo {
     position: relative;
 }
 
+.clanek-box3 {
+    max-width: 700px;
+    min-height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    margin-top: -275px;
+}
+
 .content-box {
     width: 75%;
     padding-bottom: 40px;
@@ -313,6 +322,15 @@ li .logo {
     padding-bottom: 40px;
 }
 
+.content-box3 {
+    width: 75%;
+    padding-top: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    padding-bottom: 80px;
+}
+
 .content-box-gallery {
     max-width: 700px;
     padding-top: 40px;
@@ -328,6 +346,12 @@ li .logo {
     border-top: 1px solid #669900;
 }
 
+.info-box2 {
+    width: 190px;
+    min-height: 100px;
+    border-right: 1px solid #669900;
+}
+
 .clanek {
     width: 100%;
     min-height: 50px;
@@ -340,7 +364,7 @@ li .logo {
     min-height: 50px;
     margin-top: 50px;
     padding-bottom: 50px;
-    border-bottom: 1px solid #b30000;
+    border-bottom: 1px dashed #b30000;
 }
 
 .clanek2 {
@@ -391,13 +415,19 @@ h1.h1-kontakt2::after {
     margin-top: 5px;
 }
 
+.text-onas1 {
+    font-size: 21px;
+    font-weight: 400;
+    color: #20323b;
+}
+
 .p-clanek {
     text-decoration: none;
     font-size: 15px;
-    font-weight: 200;
+    font-weight: 300;
     color: #20323b;
-    margin-left: 15px;
-    opacity: 0.8;
+    margin-left: 0px;
+    opacity: 1;
 }
 
 .autor {

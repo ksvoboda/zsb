@@ -13,11 +13,11 @@
                 </div>
                 <div class="table-text-1">
                     <span class="title">{{ flatpage.title }}</span><br/>
-                    <a href="/flatpage/{{ flatpage.title }}" class="table-control2">Upravit</a><br/>
                 </div>
                 <div class="table-control">
                     <a href="/admin/flatpage/{{ post.title_text }}/delete" class="table-control2">Smazat</a><br/>
                     <a href="/admin/flatpage/{{ post.title_text }}/edit" class="table-control2">Upravit</a><br/>
+                    <a href="/flatpage/{{ flatpage.title }}" class="table-control2">Zobrazit</a><br/>
                 </div>
             </div>
         {% endfor %}

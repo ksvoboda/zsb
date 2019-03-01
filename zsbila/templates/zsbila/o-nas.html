@@ -1,165 +1,148 @@
-<html lang="cs">
-<head>
-    <title>ZŠ Bílá</title>
-    <link rel="shortcut icon" href="pictures/zsbila-logo.png"/>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
-    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
-    <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
-    <link href="css/animate.css" rel="stylesheet"/>
-    <link href="css/waypoints.css" rel="stylesheet"/>
-    <script src="js/jquery.waypoints.min.js" type="text/javascript"></script>
-    <script src="js/waypoints.js" type="text/javascript"></script>
-    <script src="js/page.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Comfortaa:100,200,300,400,500,600,700" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
-</head>
+{% extends "zsbila/default.html" %}
+{% load staticfiles %}
 
-<body>
-    <div class="navbar">
-        <div class="navbar2">
-            <ul>
-                <li>
-                    <a href="/">Domů</a>
-                </li>
-                <li class="logo">
-                    <img class="logo" src="pictures/zsbila-logo.jpg"/>
-                </li>
-                <li>
-                    <a class="dropbtn" onclick="myFunction()">Menu</a>
-                </li>
-            </ul>
-        </div>
-    </div>
-    <div class="dropdown-content" id="myDropdown">
-       <div class="column">
-            <p class="dropmenu-name">Hlavní nabídka</p>
-            <a class="columnlink" href="#">Aktuality</a>
-            <a class="columnlink" href="#">O škole</a>
-            <a class="columnlink" href="#">Školní akce</a>
-            <a class="columnlink" href="#">Projekty</a>
-            <a class="columnlink" href="#">Fotogalerie</a>
-            <a class="columnlink" href="#">Pro budoucí prvňáčky</a>
-        </div>
-        <div class="column2">
-            <p class="dropmenu-name-2">Hlavní nabídka</p>
-            <a class="columnlink" href="#">Aktuality</a>
-            <a class="columnlink" href="#">O škole</a>
-            <a class="columnlink" href="#">Školní akce</a>
-            <a class="columnlink" href="#">Projekty</a>
-            <a class="columnlink" href="#">Fotogalerie</a>
-            <a class="columnlink" href="#">Pro budoucí prvňáčky</a>
-        </div>
-    </div>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="{% static 'js/page.js' %}"></script>
 
-    <div class="bgimg-3" style="background-image: url(pictures/adventure-climb-clouds-305818.jpg);">
+{% block body %}
+    <div class="bgimg-3" style="background-image: url({% static 'pictures/adventure-climb-clouds-305818.jpg' %});">
     </div>
-    <div class="content-box2">
+    <div class="content-box3">
       <div class="info-box2">
-          <p class="autor">3D model školy</p>
+          <p class="autor">Obecné</p>
           <br>
-          <p class=datum>Vzdělávací program</p>
+          <p class="datum">Školní řád</p>
           <br>
-          <p class=datum>Školní řád</p>
-          <br>
-          <p class=datum>Kontakty</p>
+          <p class="datum">3D model školy</p>
           <br>
           <p class=datum>Rozvrhy</p>
           <br>
           <p class=datum>Kroužky</p>
           <br>
           <p class=datum>Výroční zpráva</p>
+          <br>
+          <p class=datum>Vzdělávací program</p>
+          <br>
+          <p class=datum>Kontakty</p>
       </div>
-      <div class="clanek-box">
-        <div>
+      <div class="clanek-box3">
+        <div style="border-bottom: 1px solid #669900;">
           <h3 class="text-onas1">O škole</h3>
-          <p class="text-onas2">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Nullam dapibus fermentum ipsum. Nullam eget nisl. Maecenas lorem. Sed vel lectus. Donec odio tempus molestie, porttitor ut, iaculis quis, sem. Nulla non arcu lacinia neque faucibus fringilla. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? <img src="pictures/adventure-climb-clouds-305818.jpg" style="width: 200px; float: left; padding-right: 20px; padding-top: 20px; padding-bottom: 10px;" />Etiam posuere lacus quis dolor. Nullam feugiat, turpis at pulvinar vulputate, erat libero tristique tellus, nec bibendum odio risus sit amet ante. Aliquam erat volutpat.
-
-    Cras elementum. Maecenas ipsum velit, consectetuer eu lobortis ut, dictum at dui. Nulla accumsan, elit sit amet varius semper, nulla mauris mollis quam, tempor suscipit diam nulla vel leo. Praesent in mauris eu tortor porttitor accumsan. Et harum quidem rerum facilis est et expedita distinctio. Praesent id justo in neque elementum ultrices. Aliquam erat volutpat. Duis bibendum, lectus ut viverra rhoncus, dolor nunc faucibus libero, eget facilisis enim ipsum id lacus. Maecenas libero. Integer malesuada. Aliquam id dolor. Quis autem vel eum iure reprehenderit qui in ea <img src="pictures/adventure-climb-clouds-305818.jpg" style="width: 200px; float: right; padding-left: 20px; padding-top: 20px; padding-bottom: 10px;" />voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? Morbi imperdiet, mauris ac auctor dictum, nisl ligula egestas nulla, et sollicitudin sem purus in lacus. Praesent vitae arcu tempor neque lacinia pretium. Etiam sapien elit, consequat eget, tristique non, venenatis quis, ante. Fusce suscipit libero eget elit. Fusce aliquam vestibulum ipsum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-
-    Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? Vivamus porttitor turpis ac leo. Nulla pulvinar eleifend sem. Integer vulputate sem a nibh rutrum consequat. Nulla est. Vivamus luctus egestas leo. Nullam sit amet magna in magna gravida vehicula. Duis sapien nunc, commodo et, interdum suscipit, sollicitudin et, dolor. Morbi leo mi, nonummy eget tristique non, rhoncus non leo. Integer vulputate sem a nibh rutrum consequat. Nulla pulvinar eleifend sem.
-
-    Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae <img src="pictures/adventure-climb-clouds-305818.jpg" style="width: 200px; float: left; padding-right: 20px; padding-top: 20px; padding-bottom: 10px;" />sint et molestiae non recusandae. Nam sed tellus id magna elementum tincidunt. Aliquam ornare wisi eu metus. Morbi imperdiet, mauris ac auctor dictum, nisl ligula egestas nulla, et sollicitudin sem purus in lacus. Aenean placerat. Aliquam erat volutpat. Integer lacinia. Duis bibendum, lectus ut viverra rhoncus, dolor nunc faucibus libero, eget facilisis enim ipsum id lacus. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Duis risus. Pellentesque ipsum. Fusce wisi. Etiam ligula pede, sagittis quis, interdum ultricies, scelerisque eu. Mauris dictum facilisis augue. Integer pellentesque quam vel velit. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Etiam posuere lacus quis dolor.</p>
-    </div>
+          <p class="text-onas2">
+          <img src="{% static 'pictures/adventure-climb-clouds-305818.jpg' %}" style="width: 300px; float: left; padding-right: 20px; padding-top: 5px; padding-bottom: 10px;" /></p>
+          Stavba bývalého francouzského lycea  v Bílé ulici v Dejvicích dokončená podle návrhu Jana Gillara v roce 1934, nabyla evropské proslulosti už krátce po svém vzniku a stala se vzorem pro výstavbu pozdějších nejen pražských škol. Architektura stavby byla cele podřízena zamýšlené funkci objektů od vnější podoby (mateřská škola, základní škola, lyceum) až po osvětlení místností a zřízení odborných pracoven. Tento skvost funkcionalistické architektury obdivují i dnešní architekti.
+Francouzské gymnázium bylo vystřídáno reformním reálným gymnáziem, jedenáctiletkou, dvanáctiletkou a pak školou základní. V roce 1974 dostala základní škola jméno po zakladateli mexické republiky Benito Juárezovi. V roce 2006 prošla celkovou rekonstrukcí za více než 125 milionů korun pouze z prostředků zřizovatele – Městské části Praha 6. V současné době nese název ZŠ a MŠ Bílá, podle ulice, kde sídlí.
+<br>
+<br>
+V současnosti je ve škole 25 tříd. Většina tříd je umístěna v hlavní budově, kde je částečně prostorově oddělen I. a II. stupeň. Dvě první třídy a jedna druhá třída jsou umístěny v areálu školní družiny v samostatné budově. Tímto opatřením neřešíme nedostatek místa v hlavní budově, ale snažíme se vytvořit novým školákům klidnější a ničím nerušené prostředí při přechodu na základní školu. Ve všech ročnících probíhá výuka podle vlastního vzdělávacího programu Cesta k úspěchu.
+<br>
+<br>
+Jsme běžnou základní školou. Přesto se však zaměřujeme na určité oblasti více. Jednou takovou oblastí je výuka jazyků. Máme velmi propracovaný systém výuky jazyků, a to jak na prvním stupni, tak i na druhém stupni.  Výuku zajišťují jak naši velmi kvalitní jazykáři,  tak i rodilí mluvčí, kteří učí v součtu více než dva a půl úvazku učitele.  S výukou začínáme již v první a druhé třídě, resp. již v naší mateřské školce, kdy dětem nabízíme výuku formou kroužku zařazeného v dopolední výuce.  ve všech dalších ročnících mají žáci po 4 hod. anglického jazyka týdně, což je o celou jednu čtvrtinu výuky více než předepisuje RVP.
+<br>
+<br>
+Na škole pracuje i speciální pedagožka a asistenti pedagoga, kteří pomáhají žákům se specifickými poruchami zvládat obtíže v učení. Speciální pedagožka pracuje se žáky z 1. stupně v D-klubu, kde jsou rozděleni podle druhu poruchy a věku. Přes počáteční nedůvěru ze strany rodičů i vyučujících se tento systém velmi osvědčil, k velké spokojenosti žáků, rodičů i učitelů. Všichni žáci, u nichž byla diagnostikována speciální porucha učení, mají zpracovaný individuální plán a obě pedagogické asistentky podle doporučení pedagogicko-psychologické poradny s jednotlivými žáky pracují.
+<br>
+<br>
+Ve volném čase si naši žáci i děti mimoškolní mohou vybrat ze široké  nabídky školních kroužků. V rámci školní družiny, která je otevřená pro všechny děti od 1. do 3. ročníku, případně i zájemcům že 4. ročníku, se mohou děti zabavit při rozličných aktivitách dle měsíčních plánů zkušených vychovatelek.  Ve škole funguje školní knihovna, která je pod vedením paní knihovnice plně k dispozici všem žákům i učitelům každý den od 10 do 15 hodin.
+<br>
+<br>
+Raritou je odborná učebna fyziky, která byla v rámci rekonstrukce uvedena do původního stavu, tak jak byla zařízena v roce 1935. Do lavic je zaveden střídavý i stejnosměrný proud, každá lavice má i svou skříňku na pomůcky tak, aby každý žák mohl podle pokynů učitele sám provádět pokusy.
+<br>
+<br>
+Nově rekonstruovány byly odborné pracovny - učebna chemie i s chemickou laboratoří, ateliér pro výtvarnou výchovu, učebna hudební výchovy má i vlastní nahrávací studio apopulární karaoke.
+<br>
+<br>
+V multimediální učebně MMPII kompletně zrekonstruované v roce 2014 pak mají žáci k dispozici 29 počítačů a vyučující interaktivní tabuli. Postupně vybavujeme všechny učebny moderní technikou -  každá učebna má svůj počítač, doplňujeme dataprojektory, interaktivní tabule s ozvučením, vizualizéry, velkoplošné plazmové televize.  V celé budově školy je velmi kvalitní wifi síť, která umožňuje využívat všech 70 iPadů pro výuku jakéhokoli předmětu ve kterékoliv místnosti školy.
+<br>
+<br>
+Pro tělesnou výchovu využíváme dvě vlastní tělocvičny a multifunkčń venkovní hřiště v areálu školy i prostory stadionu SK Kotlářka. V ozvučené aule školy je divadelní jeviště, které slouží nejen pro vystoupení školního souboru Bělásek a školního dramatického kroužku, ale i pro další kulturní akce jako jsou školní plesy či vánoční koncerty.
+<br>
+<br>
+Během všech přestávek mají děti naprostou volnost pohybu po celé budově školy. V případě příznivého počasí mohou především žáci I. stupně trávit velké přestávky na školní zahradě nebo na školním hřišti. Ve škole funguje školní bufet, který nabízí dětem o velké přestávce obložené housky, jogurty a mléčné svačiny. Maximálně jsou využívány i stoly pro stolní tenis umístěné v hale školy. Všichni žáci mají k dispozici uzamykatelné šatní skříňky.
+<br>
+<br>
+Školní jídelna vaří denně tři jídla (jedno je vždy bezmasé), které si žáci mohou předem objednávat buď pomocí bezdotykových čipů nebo pomocí internetu - viz hlavní menu - Jídelna (klikni zde)
 <br>
 <br>
 <br>
 <br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br><br><br><br><br>
-<div>
-    <h3 class="text-onas1">Vzdělávací program</h3>
-    <p class="text-onas2">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Nullam dapibus fermentum ipsum. Nullam eget nisl. Maecenas lorem. Sed vel lectus. Donec odio tempus molestie, porttitor ut, iaculis quis, sem. Nulla non arcu lacinia neque faucibus fringilla. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? <img src="pictures/adventure-climb-clouds-305818.jpg" style="width: 200px; float: left; padding-right: 20px; padding-top: 20px; padding-bottom: 10px;" />Etiam posuere lacus quis dolor. Nullam feugiat, turpis at pulvinar vulputate, erat libero tristique tellus, nec bibendum odio risus sit amet ante. Aliquam erat volutpat.
-
-Cras elementum. Maecenas ipsum velit, consectetuer eu lobortis ut, dictum at dui. Nulla accumsan, elit sit amet varius semper, nulla mauris mollis quam, tempor suscipit diam nulla vel leo. Praesent in mauris eu tortor porttitor accumsan. Et harum quidem rerum facilis est et expedita distinctio. Praesent id justo in neque elementum ultrices. Aliquam erat volutpat. Duis bibendum, lectus ut viverra rhoncus, dolor nunc faucibus libero, eget facilisis enim ipsum id lacus. Maecenas libero. Integer malesuada. Aliquam id dolor. Quis autem vel eum iure reprehenderit qui in ea <img src="pictures/adventure-climb-clouds-305818.jpg" style="width: 200px; float: right; padding-left: 20px; padding-top: 20px; padding-bottom: 10px;" />voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? Morbi imperdiet, mauris ac auctor dictum, nisl ligula egestas nulla, et sollicitudin sem purus in lacus. Praesent vitae arcu tempor neque lacinia pretium. Etiam sapien elit, consequat eget, tristique non, venenatis quis, ante. Fusce suscipit libero eget elit. Fusce aliquam vestibulum ipsum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-
-Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? Vivamus porttitor turpis ac leo. Nulla pulvinar eleifend sem. Integer vulputate sem a nibh rutrum consequat. Nulla est. Vivamus luctus egestas leo. Nullam sit amet magna in magna gravida vehicula. Duis sapien nunc, commodo et, interdum suscipit, sollicitudin et, dolor. Morbi leo mi, nonummy eget tristique non, rhoncus non leo. Integer vulputate sem a nibh rutrum consequat. Nulla pulvinar eleifend sem.
-
-Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae <img src="pictures/adventure-climb-clouds-305818.jpg" style="width: 200px; float: left; padding-right: 20px; padding-top: 20px; padding-bottom: 10px;" />sint et molestiae non recusandae. Nam sed tellus id magna elementum tincidunt. Aliquam ornare wisi eu metus. Morbi imperdiet, mauris ac auctor dictum, nisl ligula egestas nulla, et sollicitudin sem purus in lacus. Aenean placerat. Aliquam erat volutpat. Integer lacinia. Duis bibendum, lectus ut viverra rhoncus, dolor nunc faucibus libero, eget facilisis enim ipsum id lacus. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Duis risus. Pellentesque ipsum. Fusce wisi. Etiam ligula pede, sagittis quis, interdum ultricies, scelerisque eu. Mauris dictum facilisis augue. Integer pellentesque quam vel velit. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Etiam posuere lacus quis dolor.</p>
 </div>
 <br>
 <br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br><br><br><br><br>
-<div>
+<div id="skolni-rad" style="border-bottom: 1px solid #669900;">
 <h3 class="text-onas1">Školní řád</h3>
-<p class="text-onas2">Vážení rodiče, v letošní roce vstoupily v platnost některé změny ve Školní řádu. 
- 
-
+<p class="text-onas2">Vážení rodiče, v letošní roce vstoupily v platnost některé změny ve Školní řádu.
 Novinkou v letošním roce je zavedení elektronické žákovské knížky, kterou budou používat všechny děti od 3. do 9. třídy.  Žákům tak zůstane jen Záznamník žáka, ktrý bude sloužit k omlouvání absence (omluvný list) a k ostatním záznamům a sdělením informativního charakteru. Dětem prvního a druhého ročníku zůstávají i nadále papírové Notýsky.
-
- 
-
-Další změnou, kterou jsme od letošního roku zavedli, je zákaz používání mobilních telefonů, a to nejen při výuce, ale po celou dobu přítomnosti dětí ve škole. Jsme přesvědčeni, že toto opatření bude mít významný dopad na utváření vnitřního klimatu tříd i školy. Prosíme vás, abyste nás v tomto kroku podpořili i vy. 
-
- 
-
+Další změnou, kterou jsme od letošního roku zavedli, je zákaz používání mobilních telefonů, a to nejen při výuce, ale po celou dobu přítomnosti dětí ve škole. Jsme přesvědčeni, že toto opatření bude mít významný dopad na utváření vnitřního klimatu tříd i školy. Prosíme vás, abyste nás v tomto kroku podpořili i vy.
 Třetí úprava řeší postup podávání žádostí o uvolněni z výuky. Od letošního roku můžete žádat o uvolnění do pěti dnů včetně svého třídního učitele, na více dnů pak ředitele školy. Zůstává v platnosti pravidlo, že rodiče mohou žádat o uvolnění v maximální délce dvou týdnů ve školním roce.
-
- 
-
 Úpravy Školního řádu schválila Školská rada před začátkem školního roku.
-
-
-Školní řád v plném znění otevřete zde         Školní řád.pdf</p>
+Školní řád v plném znění otevřete <a href="#">zde</a></p>
+<br>
+<br>
 </div>
+
+<br>
+<br>
+<div id="skolni-rad" style="border-bottom: 1px solid #669900;">
+<h3 class="text-onas1">3D model školy</h3>
+<div class="sketchfab-embed-wrapper"><iframe width="100%" height="300px" src="https://sketchfab.com/models/12596df4717241be86ced3c154a59cac/embed" frameborder="0" allow="autoplay; fullscreen; vr" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+</div>
+<p class="text-onas2">Autoři modelu: <b>Matěj Svoboda, Vojtěch sýkora</b></p>
+<br>
+<br>
+</div>
+<br>
+<br>
+<div id="skolni-rad" style="border-bottom: 1px solid #669900;">
+<h3 class="text-onas1">Rozvrhy</h3>
+<p class="text-onas2">Rozvrhy hodin jednotlivých tříd pro školní rok 2018/2019 jsou k dispozici v systému Bakaláři <a href="#">zde</a>.
+Přihlašovací údaje pro zákonné zástupce /1x/ a pro žáka /1x/ jste obdrželi od třídního učitele. Jsou platné po celou dobu studia na ZŠ Bílá.
+Novým žákům bude přihlašovací jméno a heslo vydáno při nástupu do školy.
+V případě ztráty přihlašovacích údajů kontaktujte emailem zástupce ředitele školy Mgr. Jiřího Švece <a href="#">svec@zsbila.cz</a> a vyčkejte na vygenerování nového hesla.
+</p>
+<br>
+<br>
+</div>
+<br>
+<br>
+<div id="skolni-rad" style="border-bottom: 1px solid #669900;">
+<h3 class="text-onas1">Kroužky</h3>
+<p class="text-onas2">Ve školním roce 2018/ 2019 nabízíme pro naše žáky opět širokou nabídku kroužků. Více informací najdete níže :
+<br>
+Nabídku <b>Školních kroužků</b> Zobrazíte <a href="#">zde</a>
+<br>
+<br>
+<b>Škola je registrována v programu Aktivní město.</b> Rodiče žáků s trvalým pobytem na Praze 6 mohou čerpat příspěvek ve výši 600Kč/800 Kč i na vybrané školní kroužky - viz webové stránky Aktivní město, sekce Benefity. Pro přesměrování klikni <a href="#">zde</a>
+<br>
+<br>
+Anotaci vybraných kroužků otevřete <a href="#">zde</a></p>
+<br>
+<br>
+</div>
+<br>
+<br>
+<div id="skolni-rad" style="border-bottom: 1px solid #669900;">
+<h3 class="text-onas1">Výroční zpráva</h3>
+<p class="text-onas2"><a href="#">Zde si můžete prohlédnout výroční zprávu za školní rok 2017/18</a>
+<br>
+<br>
+<i>Dokument je uložen ve formátu PDF. V případě, že jej nemáte ve svém počítači nainstalován, můžete si jej volně stáhnout z internetu.</i></p>
+<br>
+<br>
+</div>
+<div id="skolni-rad" style="border-bottom: 1px solid #669900;">
+<br>
+<h3 class="text-onas1">Podpora</h3>
+<p class="text-onas2">Tato žákovská práce vznikla díky projektu:
+<br>
+<br>
+Zvýšení kvality vzdělávání žáků, rozvoje klíčových kompetencí, oblastí vzdělávání a gramotností
+reg. č. CZ.02.3.68/0.0/0.0/16_011/0000664</p>
+<img src="{% static 'pictures/logo_eu_980.jpg' %}" style="width:100%;">
+<br>
+<br>
+</div>
+
       </div>
     </div>
-
-    <div class="footer">
-        <div class="footer2">
-            <img class="logo2" src="pictures/zsbila-logo.png"/>
-            <p class="p-footer2">© 2018 Základní škola a <br>Mateřská škola, <br>Praha 6, Bílá 1</p>
-            <p class="p-footer">Created by Kryštof Svoboda &<br>Vítek Peterka, students <br>of Základní škola Bílá</p>
-            <div class="column-footer">
-                 <p class="dropmenu-name-footer">Hlavní nabídka</p>
-                 <a class="columnlink-footer" href="#">Aktuality</a><br>
-                 <a class="columnlink-footer" href="#">O škole</a><br>
-                 <a class="columnlink-footer" href="#">Školní akce</a><br>
-                 <a class="columnlink-footer" href="#">Projekty</a><br>
-                 <a class="columnlink-footer" href="#">Fotogalerie</a><br>
-                 <a class="columnlink-footer" href="#">Pro budoucí prvňáčky</a>
-             </div>
-        </div>
-    </div>
-</body>
-</html>
+{% endblock %}

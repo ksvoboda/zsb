@@ -1,0 +1,10 @@
+{% extends "zsbila/defaultadmin.html" %}
+
+
+{% block admin %}
+    <h1 class="dashboard-name">Upravit kategorii</h1>
+    <form method="POST" class="contact-form">{% csrf_token %}
+           {{ form.as_p }}
+       <button type="submit" class="save btn btn-default">Uložit</button>
+    </form>
+{% endblock %}
