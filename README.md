@@ -14,7 +14,7 @@ Před prvním spuštěním:
 <h3>Frontend</h3>
 
 - vytvořit galerii (html, css, js)
-- upravit footer
+- upravit footer (v galerii, možná ještě někde - nevím kde)
 - upravit vzhled administrační stránky
 - vyřešit problémy se stránkou o nás (o-nas.html)
 - rozdělení učitelů (třídní, netřídní,...)
