@@ -364,7 +364,7 @@ li .logo {
     min-height: 50px;
     margin-top: 50px;
     padding-bottom: 50px;
-    border-bottom: 1px dashed #b30000;
+    border-bottom: 1px solid #b30000;
 }
 
 .clanek2 {
@@ -411,7 +411,7 @@ h1.h1-kontakt2::after {
     content: '';
     width: 40px;
     height: 1px;
-    background: #669900;
+    background: #b30000;
     margin-top: 5px;
 }
 
@@ -470,7 +470,7 @@ h1.h1-kontakt2::after {
 }
 
 .pagination {
-    width: 215px;
+    width: 230px;
     padding-bottom: 70px;
     padding-top: 20px;
     margin-left: auto;
