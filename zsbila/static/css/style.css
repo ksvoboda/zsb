@@ -225,7 +225,7 @@ li .logo {
 }
 
 .bgimg-2 {
-    height: calc(100% - 85px);
+    height: calc(80% - 85px);
     position: relative;
     background-attachment: fixed;
     background-position: center;
