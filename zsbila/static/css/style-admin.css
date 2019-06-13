@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 html, body {
     padding: 0;
     margin: 0;
@@ -89,43 +93,40 @@ html, body {
 /* admin layout */
 .render-body {
     width: calc(100% - 250px);
-    height: calc(100% - 50px);
+    height: 100%;
     right: 0;
     position: absolute;
-    background-color: #ebf0f4;
-    margin-top: 60px;
-}
-
-.navigation-top {
-    height: 60px;
-    width: 100%;
-    background-color: #336699;
-    position: fixed;
-    z-index: 123;
+    background-color: #f3f5f9;
 }
 
 .navigation {
     width: 250px;
-    height: calc(100% - 50px);
+    height: 100%;
     position: fixed;
     background-color: #fff;
-    -webkit-box-shadow: -1px 10px 71px -18px rgba(0,0,0,0.59);
-    -moz-box-shadow: -1px 10px 71px -18px rgba(0,0,0,0.59);
-    box-shadow: -1px 10px 71px -18px rgba(0,0,0,0.59);
-    margin-top: 60px;
 }
 
 .navigation2 {
     width: 100%;
     background-color: #336699;
-    margin-top: 20px;
+    margin-top: 125px;
+}
+
+.admin-name-school {
+    float: left;
+    color: #5e72e4;
+    font-size: 20px;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-left: 90px;
+    margin-top: 28px;
 }
 
 .namebox {
     margin-top: -20px;
     background-color: #336699;
     width: 250px;
-    height: 60px;
+
     float: left;
 }
 
@@ -154,63 +155,25 @@ h1.h1-name {
     height: 25px;
 }
 
-.account-info {
-    height: 100px;
-    width: 100%;
-    background-color: #fff;
-}
-
-.account-info::after {
-    display: block;
-    content: '';
-    width: 230px;
-    height: 1px;
-    margin-left: 10px;
-    background: #669900;
-    margin-top: -8px;
-}
-
 .img-avatar {
-    height: 70%;
+    height: 55px;
     width: auto;
     margin-left: 15px;
     margin-top: 15px;
+    float: right;
+    margin-right: 42px;
 }
 
 h4 {
-    margin-top: -55px;
-    margin-left: 90px;
-    color: #20323b;
-    font-size: 19px;
-    font-weight: 400;
+    margin-top: 33px;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 500;
+    float: right;
 }
 
-h6 {
-    margin-top: -20px;
-    margin-left: 90px;
-    color: #404040;
-    font-size: 14px;
-    font-weight: 300;
-}
-
-
-.nav-li-name {
-    color: #404040;
-    font-size: 12px;
-    font-weight: 300;
-    text-transform: uppercase;
-    margin-left: 20px;
-    margin-top: -10px;
-}
-
-.nav-li-name::after {
-    display: block;
-    content: '';
-    width: 230px;
-    height: 1px;
-    margin-top: 7px;
-    margin-left: 10px;
-    background: #336699;
+.material-icons {
+    margin-left: 30px;
 }
 
 ul {
@@ -235,14 +198,13 @@ li {
 
 li a {
     text-decoration: none;
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 300;
-    color: #20323b;
+    color: #919191;
     -webkit-transition-duration: 0.3s;
     transition-duration: 0.3s;
     cursor: pointer;
-    margin-left: 20px;
-    margin-bottom: -10px;
+    margin-left: 30px;
 }
 
 li a:hover {
@@ -251,34 +213,98 @@ li a:hover {
     transition-duration: 0.3s;
 }
 
-.material-icons {
-    margin-right: 10px;
-    margin-top: -2px;
-    -webkit-transition-duration: 0.3s;
-    transition-duration: 0.3s;
-}
-
 .material-icons.md-dark { color: rgba(0, 0, 0, 0.54); }
 
 /* admin dashboard */
 .dashboard-name {
-    color: #404040;
-    font-size: 20px;
+    color: #ffffff;
+    font-size: 17px;
     font-weight: 400;
-    margin-top: 20px;
+    margin-top: 30px;
     margin-left: 30px;
+    text-transform: uppercase;
+}
+
+.dashboard-text1 {
+    float: left;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-left: 50px;
+    margin-top: 33px;
+}
+
+.box1 {
+    width: 100%;
+    height: 450px;
+    background-image: linear-gradient(87deg,#5e72e4 0,#825ee4 100%)!important
+}
+
+.header-box {
+    height: 100px;
+    width: 100%;
+}
+
+.column {
+  float: left;
+  width: 25%;
+  padding: 0 25px;
+  margin-top: 25px;
+}
+
+/* Remove extra left and right margins, due to padding */
+.row {margin: 0 20px;}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+/* Style the counter cards */
+.card {
+  padding: 16px;
+  background-color: #fff;
+  border-radius: 5px;
+  height: 100px;
+  min-width: 250px;
+}
+
+.counterbox-heading {
+  color: #919191;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-left: 10px;
+  margin-top: 0px;
+}
+
+.counterbox-text {
+  color: #19214d;
+  font-size: 23px;
+  font-weight: 400;
+  margin-left: 10px;
+  margin-top: -5px;
 }
 
 /* admin table */
 .table-out {
-    max-width: 1200px;
+    max-width: 1000px;
     height: auto;
     background-color: #fff;
-    -webkit-box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.51);
-    -moz-box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.51);
-    box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.10);
-    min-width: 755px;
-    margin-left: 100px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .table-header {
@@ -289,7 +315,7 @@ li a:hover {
 }
 
 .create-btn {
-    background-color: #336699;
+    background-color: #f5365c;
     font-family: 'Poppins', sans-serif;
     color: #fff;
     padding: 12px 12px;
@@ -302,18 +328,19 @@ li a:hover {
     transition-duration: 0.3s;
     cursor: pointer;
     width: 200px;
+    margin-left: 235px;
+    margin-top: -220px;
 }
 
 .create-btn:hover {
-    background-color: #336699;
+    background-color: #fb6340;
     color: #ffffff;
 }
 
 .table-in {
-    width: 100%;
+
     height: 105px;
     border-bottom: 1px solid #bfbfbf;
-    min-width: 755px;
 }
 
 .table-img-1 {
@@ -337,10 +364,8 @@ li a:hover {
 }
 
 .table-text-1 {
-    width: 500px;
     margin-left: 150px;
     margin-top: -80px;
-    min-width: 230px;
 }
 
 .title {

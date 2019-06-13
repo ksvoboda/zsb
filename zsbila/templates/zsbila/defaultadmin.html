@@ -2,42 +2,65 @@
 <head>
     <title>ZŠ Bílá | Administrace</title>
     <link rel="stylesheet" type="text/css" href="/static/css/style-admin.css">
+    <link href="/static/css/nucleo.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,300i,400,400i,500" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
     <div class="navigation">
-        <div class="account-info">
-            <img src="/static/pictures/avatar3.png" class="img-avatar">
-            <h4>Jiří Švec</h4>
-            <h6>Zástupce ředitele</h6>
-        </div>
+        <p class="admin-name-school">ZŠ Bílá</p>
         <div class="navigation2">
             <ul class="nav-ul">
-                <li><a href="/admin">Úvodní stránka</a><a style="float: right;"><i class="material-icons md-dark">keyboard_arrow_right</i></a></li>
-                <li><a href="/admin/posts">Články</a><a style="float: right;"><i class="material-icons md-dark">keyboard_arrow_right</i></a></li>
-                <li><a href="/admin/flatpages">Statické stránky</a><a style="float: right;"><i class="material-icons md-dark">keyboard_arrow_right</i></a></li>
-                <li><a href="/admin/contacts">Učitelé</a><a style="float: right;"><i class="material-icons md-dark">keyboard_arrow_right</i></a></li>
-                <li><a href="/admin/foto">Fotogalerie</a><a style="float: right;"><i class="material-icons md-dark">keyboard_arrow_right</i></a></li>
-                <li><a href="/admin/menuAll">Menu</a><a style="float: right;"><i class="material-icons md-dark">keyboard_arrow_right</i></a></li>
-                <li><a href="/admin/users">Uživatelé</a><a style="float: right;"><i class="material-icons md-dark">keyboard_arrow_right</i></a></li>
-                <li><a href="/admin/settings">Nastavení</a><a style="float: right;"><i class="material-icons md-dark">keyboard_arrow_right</i></a></li>
+                <li><i class="material-icons md-dark">home</i><a href="/admin">Úvodní stránka</a></li>
+                <li><i class="material-icons md-dark">comment</i><a href="/admin/posts">Články</a></li>
+                <li><i class="material-icons md-dark">developer_board</i><a href="/admin/flatpages">Statické stránky</a></li>
+                <li><i class="material-icons md-dark">wc</i><a href="/admin/contacts">Učitelé</a></li>
+                <li><i class="material-icons md-dark">perm_media</i><a href="/admin/foto">Fotogalerie</a></li>
+                <li><i class="material-icons md-dark">dehaze</i><a href="/admin/menuAll">Menu</a></li>
+                <li><i class="material-icons md-dark">account_circle</i><a href="/admin/users">Uživatelé</a></li>
+                <li><i class="material-icons md-dark">settings</i><a href="/admin/settings">Nastavení</a></li>
             </ul>
         </div>
     </div>
-    <div class="navigation-top">
-        <div class="namebox">
-            <h1 class="h1-name" align="center">Administrace</h1>
-        </div>
-        <div class="account-top">
-            <a href="/admin"><img src="/static/pictures/home-5-256.png" alt="Domů"></a>
-            <a href="/"><img src="/static/pictures/globe-256.png" alt="Zobrazit stránku"></a>
-            <a href="#"><img src="/static/pictures/settings-25-256.png" alt="Nastavení"></a>
-            <a href="/admin/logout"><img src="/static/pictures/door-9-256.png" alt="Odhlásit se"></a>
-        </div>
-    </div>
     <div class="render-body">
+      <div class="box1">
+        <div class="header-box">
+          <img src="/static/pictures/avatar3.png" class="img-avatar">
+          <h4>Jiří Švec</h4>
+          <h1 class="dashboard-text1">Administrace</h1>
+        </div>
+
+            <div class="row">
+                <div class="column">
+                  <div class="card">
+                    <p class="counterbox-heading">Počet příspěvků</p>
+                    <p class="counterbox-text">259</p>
+                  </div>
+                </div>
+
+                <div class="column">
+                  <div class="card">
+                    <p class="counterbox-heading">Počet statických stránek</p>
+                    <p class="counterbox-text">127</p>
+                  </div>
+                </div>
+
+                <div class="column">
+                  <div class="card">
+                    <p class="counterbox-heading">Počet kontaktů</p>
+                    <p class="counterbox-text">58</p>
+                  </div>
+                </div>
+
+                <div class="column">
+                  <div class="card">
+                    <p class="counterbox-heading">Počet fotografií</p>
+                    <p class="counterbox-text">15 930</p>
+                  </div>
+                </div>
+              </div>
+          </div>
         {% block admin %}  {% endblock %}
     </div>
 </body>
