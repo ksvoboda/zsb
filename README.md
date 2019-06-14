@@ -18,7 +18,7 @@ Před prvním spuštěním:
 - upravit vzhled administrační stránky - v procesu
 - vyřešit problémy se stránkou o nás (o-nas.html) - responzivita...
 - rozdělení učitelů (třídní, netřídní,...)
-- vzhled stránky 404 (není potřebné - pokud zbyde čas)
+- vzhled stránky 404 - <b>darth vader theme</b> (není potřebné - pokud zbyde čas)
 - landing page - opacity, text over image...
 - úprava menu - shadown on top
 
