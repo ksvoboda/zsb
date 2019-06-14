@@ -12,6 +12,7 @@ Před prvním spuštěním:
 <h2>TODO</h2>
 
 <h3>Frontend</h3>
+
 - vytvořit galerii (html, css, js) - vytvořit jako counter boxy v adminovi (responsivní)
 - upravit footer (v galerii, možná ještě někde - nevím kde)
 - upravit vzhled administrační stránky - v procesu
@@ -22,6 +23,7 @@ Před prvním spuštěním:
 - úprava menu - shadown on top
 
 <h3>Backend</h3>
+
 - vytvořit galerii
 - mazání a editování položek v menu
 - vyřešit duplicitní příspěvky
