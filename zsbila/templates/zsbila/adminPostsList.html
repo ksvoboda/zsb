@@ -2,19 +2,25 @@
 
 
 {% block admin %}
-    <div class="table-header">
-        <a href="/admin/post/new/edit" class="create-btn">Vytvořit nový</a>
-    </div>
+
     <div class="table-out">
+
+          <a href="/admin/post/new/edit" class="create-btn">Vytvořit nový</a>
+
         {% for post in posts %}
             <div class="table-in">
                 <div class="table-img-1">
                     <img src="/static/pictures/post-128.png" class="table-img"/>
                 </div>
                 <div class="table-text-1">
+                    <span class="title">Název:</span><br/>
+                    <span class="lat">Autor:</span><br/>
+                    <span class="lng">Datum:</span>
+                </div>
+                <div class="table-text-2">
                     <span class="title">{{ post.title_text }}</span><br/>
-                    <span class="lat">Autor: &nbsp;{{ post.publisher }}</span><br/>
-                    <span class="lng">Datum: &nbsp;{{ post.pub_date }}</span>
+                    <span class="lat">{{ post.publisher }}</span><br/>
+                    <span class="lng">{{ post.pub_date }}</span>
                 </div>
                 <div class="table-control">
                     <a href="/admin/post/{{ post.title_text }}/delete" class="table-control2">Smazat</a><br/>

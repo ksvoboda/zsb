@@ -7,6 +7,7 @@ html, body {
     height: 100%;
     min-height: 100%;
     font-family: 'Roboto', sans-serif;
+    background-color: #f2f4f9;
 }
 
 .navbar {
@@ -53,6 +54,7 @@ html, body {
     text-transform: uppercase;
     margin-left: 239px;
     margin-top: -87px;
+    border-radius: 7px;
 }
 
 .dropbtn2 {
@@ -66,10 +68,11 @@ html, body {
     padding: 13px;
     text-transform: uppercase;
     margin-left: 30px;
+    border-radius: 7px;
 }
 
 .navbar a:hover, .dropdown:hover, .dropbtn:hover, .dropbtn2:hover {
-    background-color: #cccccc;
+    background-color: #e6e6e6;
     -webkit-transition-duration: 0.3s;
     transition-duration: 0.3s;
 }
@@ -166,13 +169,13 @@ html, body {
 
 /* Add a background color on hover */
 .column a:hover {
-    color: #006699;
+    color: #0086b3;
     -webkit-transition-duration: 0.3s;
     transition-duration: 0.3s;
 }
 
 .column2 a:hover {
-    color: #006699;
+    color: #0086b3;
     -webkit-transition-duration: 0.3s;
     transition-duration: 0.3s;
 }
@@ -231,6 +234,7 @@ li .logo {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    opacity: 1;
 }
 
 .bgimg-3 {
@@ -287,6 +291,23 @@ li .logo {
     position: relative;
 }
 
+.clanek-box-kontakty {
+    max-width: 700px;
+    min-height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 7px;
+    -webkit-box-shadow: 0px 0px 300px -22px rgba(0,0,0,0.07);
+    -moz-box-shadow: 0px 0px 300px -22px rgba(0,0,0,0.07);
+    box-shadow: 0px 0px 300px -22px rgba(0,0,0,0.07);
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+
 .clanek-box2 {
     max-width: 700px;
     min-height: 300px;
@@ -301,7 +322,18 @@ li .logo {
     margin-left: auto;
     margin-right: auto;
     position: relative;
-    margin-top: -275px;
+    margin-top: -335px;
+}
+
+.onas-box {
+    border-radius: 7px;
+    -webkit-box-shadow: 0px 0px 300px -22px rgba(0,0,0,0.07);
+    -moz-box-shadow: 0px 0px 300px -22px rgba(0,0,0,0.07);
+    box-shadow: 0px 0px 300px -22px rgba(0,0,0,0.07);
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 20px;
+    background-color: #fff;
 }
 
 .content-box {
@@ -320,6 +352,7 @@ li .logo {
     margin-right: auto;
     position: relative;
     padding-bottom: 40px;
+
 }
 
 .content-box3 {
@@ -349,31 +382,55 @@ li .logo {
 .info-box2 {
     width: 190px;
     min-height: 100px;
-    border-right: 1px solid #669900;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 7px;
+    -webkit-box-shadow: 0px 0px 300px -22px rgba(0,0,0,0.07);
+    -moz-box-shadow: 0px 0px 300px -22px rgba(0,0,0,0.07);
+    box-shadow: 0px 0px 300px -22px rgba(0,0,0,0.07);
+    margin-top: 70px;
 }
 
 .clanek {
-    width: 100%;
+    width: 85%;
     min-height: 50px;
     margin-top: 60px;
     margin-bottom: 60px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 7px;
+    -webkit-box-shadow: 0px 0px 300px -22px rgba(0,0,0,0.07);
+    -moz-box-shadow: 0px 0px 300px -22px rgba(0,0,0,0.07);
+    box-shadow: 0px 0px 300px -22px rgba(0,0,0,0.07);
 }
 
 .clanek-pinned {
-    width: 100%;
+    width: 85%;
     min-height: 50px;
     margin-top: 50px;
     padding-bottom: 50px;
-    border-bottom: 1px solid #b30000;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 7px;
+    -webkit-box-shadow: 0px 0px 300px -22px rgba(0,0,0,0.1);
+    -moz-box-shadow: 0px 0px 300px -22px rgba(0,0,0,0.1);
+    box-shadow: 0px 0px 300px -22px rgba(0,0,0,0.1);
 }
 
 .clanek2 {
-    width: 100%;
+    width: 85%;
     min-height: 150px;
     margin-left: auto;
     margin-right: auto;
     position: relative;
-    margin-top: -95px;
+    margin-top: -25px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 7px;
+    -webkit-box-shadow: 0px 0px 300px -22px rgba(0,0,0,0.07);
+    -moz-box-shadow: 0px 0px 300px -22px rgba(0,0,0,0.07);
+    box-shadow: 0px 0px 300px -22px rgba(0,0,0,0.07);
+    margin-bottom: 50px;
 }
 
 h1.h1-clanek {
@@ -395,7 +452,7 @@ h1.h1-kontakt::after {
     content: '';
     width: 40px;
     height: 1px;
-    background: #669900;
+    background: #00b300;
     margin-top: 5px;
 }
 
@@ -411,7 +468,7 @@ h1.h1-kontakt2::after {
     content: '';
     width: 40px;
     height: 1px;
-    background: #b30000;
+    background: #cc3399;
     margin-top: 5px;
 }
 
@@ -434,7 +491,7 @@ h1.h1-kontakt2::after {
     text-decoration: none;
     font-size: 14px;
     font-weight: 400;
-    color: #006699;
+    color: #0086b3;
     margin-top: 20px;
 }
 
@@ -442,7 +499,7 @@ h1.h1-kontakt2::after {
     text-decoration: none;
     font-size: 14px;
     font-weight: 400;
-    color: #006699;
+    color: #0086b3;
     margin-top: -15px;
 }
 
@@ -450,7 +507,7 @@ h1.h1-kontakt2::after {
     text-decoration: none;
     font-size: 16px;
     font-weight: 400;
-    color: #006699;
+    color: #0086b3;
     float: right;
     margin-top: 10px;
     margin-right: 10px;
@@ -459,14 +516,14 @@ h1.h1-kontakt2::after {
 }
 
 .vice-odkaz:hover {
-    color: #006699;
+    color: #0099cc;
     margin-right: 0px;
     -webkit-transition-duration: 0.3s;
     transition-duration: 0.3s;
 }
 
 .vice-odkaz:visited {
-    color: #006699;
+    color: #0099cc;
 }
 
 .pagination {
@@ -483,8 +540,9 @@ h1.h1-kontakt2::after {
     text-decoration: none;
     font-size: 14px;
     font-weight: 400;
-    border: 2px solid #006699;
-    color: #006699;
+    border: 2px solid #0086b3;
+    border-radius: 7px;
+    color: #0086b3;
     transition: 0.3s;
     -webkit-transition: 0.3s;
     margin-left: 5px;
@@ -494,7 +552,7 @@ h1.h1-kontakt2::after {
 
 .pagination-odkaz:hover {
     color: #fff;
-    background-color: #006699;
+    background-color: #0086b3;
     transition: 0.3s;
     -webkit-transition: 0.3s;
 }
@@ -505,8 +563,9 @@ h1.h1-kontakt2::after {
     text-decoration: none;
     font-size: 14px;
     font-weight: 400;
-    border: 2px solid #006699;
-    color: #006699;
+    border: 2px solid #0086b3;
+    border-radius: 7px;
+    color: #0086b3;
     transition: 0.3s;
     -webkit-transition: 0.3s;
     margin-left: 5px;
@@ -516,7 +575,7 @@ h1.h1-kontakt2::after {
 
 .pagination-odkaz2:hover {
     color: #fff;
-    background-color: #006699;
+    background-color: #0086b3;
     transition: 0.3s;
     -webkit-transition: 0.3s;
 }
