@@ -279,5 +279,5 @@ def admin_menu_item_edit(request, menu_item):
 @login_required
 def admin_menu_item_delete(request, menu_item):
     # Smazání bodu
-    Category.objects.get(name=menu_item).delete()
+    Category.objects.get(name=item_link).delete()
     return HttpResponseRedirect('/admin/menu-cat/menu_item')
