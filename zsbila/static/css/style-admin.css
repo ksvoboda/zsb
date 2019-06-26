@@ -284,7 +284,7 @@ li a:hover {
 .box1 {
     width: 100%;
     height: 450px;
-    background-image: linear-gradient(87deg,#5e72e4 0,#825ee4 100%)!important
+    background-image: linear-gradient(87deg,#5e72e4 0,#9900cc 100%)!important
 }
 
 .header-box {
@@ -310,10 +310,9 @@ li a:hover {
 }
 
 /* Responsive columns */
-@media screen and (max-width: 930px) {
+@media screen and (max-width: 950px) {
   .column {
     width: 100%;
-    display: block;
     margin-bottom: 20px;
   }
 }

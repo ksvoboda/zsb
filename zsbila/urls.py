@@ -39,10 +39,10 @@ urlpatterns = [
     path('admin/menu-cat', views.admin_menu_cat_list, name="seznam-kontaktů"),
     path('admin/menu-cat/<str:menu_cat>/edit', views.admin_menu_cat_edit, name='editovaní-kontaktu'),
     path('admin/menu-cat/<str:menu_cat>/delete', views.admin_menu_cat_delete, name="smazání-kontaktu"),
-# admin-menu category #
+# admin-menu item #
     path('admin/menu-cat/menu-item', views.admin_menu_item_list, name="seznam-kontaktů"),
     path('admin/menu-cat/menu-item/<str:menu_item>/edit', views.admin_menu_item_edit, name='editovaní-kontaktu'),
-    path('admin/menu-cat/menu-item/<str:item_link>/delete', views.admin_menu_item_delete, name="smazání-kontaktu"),
+    path('admin/menu-cat/menu-item/<str:menu_item>/delete', views.admin_menu_item_delete, name="smazání-kontaktu"),
 
     url(r'^favicon\.ico$', favicon_view),
 ]
