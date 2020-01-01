@@ -5,6 +5,7 @@ from django.shortcuts import redirect
 from django.http import HttpResponseRedirect
 from django.contrib.auth import logout
 from django.forms import formset_factory
+from django.shortcuts import render, get_object_or_404
 
 from .forms import PostForm, ContactForm, FlatPageForm, MenuCatForm, MenuItemForm
 from .models import Post, Category, MenuItem, Contact, FlatPage
@@ -22,10 +23,9 @@ def index(request):
     return render(request, 'zsbila/index.html', context)
 
 
-def clanek(request, nazev):
-    urlclanek = Post.objects.get(title_text=nazev)
-    context = {'post': urlclanek}
-    return render(request, 'zsbila/clanek.html', context)
+def clanek(request, pk):
+    post = get_object_or_404(Post, pk=pk)
+    return render(request, 'zsbila/clanek.html', {'post': post})
 
 
 def kontakty(request):

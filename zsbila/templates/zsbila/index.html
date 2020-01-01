@@ -1,6 +1,7 @@
 {% extends "zsbila/default.html" %}
 {% load static %}
 
+
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script src="{% static 'js/page.js' %}"></script>
 
@@ -16,7 +17,7 @@
                   <p class="p-clanek">
                       {{ post.post_text | safe }}
                   </p>
-                  <p><a href="/post/{{ post.title_text }}" class="vice-odkaz">Více >></a></p>
+                  <p><a href="/post/{{ post.pk }}" class="vice-odkaz">Více >></a></p>
                   <p class="autor">Autor: {{ post.publisher }}</p>
                   <p class=datum>Datum: {{ post.pub_date }}</p>
               </div>
@@ -28,7 +29,7 @@
                   <p class="p-clanek">
                       {{ post.post_text | safe }}
                   </p>
-                  <p><a href="/post/{{ post.title_text }}" class="vice-odkaz">Více >></a></p>
+                  <p><a href="/post/{{ post.pk }}" class="vice-odkaz">Více >></a></p>
                   <p class="autor">Autor: {{ post.publisher }}</p>
                   <p class=datum>Datum: {{ post.pub_date }}</p>
               </div>

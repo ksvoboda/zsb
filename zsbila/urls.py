@@ -10,7 +10,7 @@ from . import views
 
 urlpatterns = [
     path('', views.index, name='index'),
-    path('post/<str:nazev>', views.clanek, name='clanek'),
+    path('post/<int:pk>', views.clanek, name='clanek'),
     path('contacts', views.kontakty, name='kontakty'),
     path('onas', views.onas, name='onas'),
     path('flatpage/<str:nazev2>', views.flatpage, name='flatpage'),
